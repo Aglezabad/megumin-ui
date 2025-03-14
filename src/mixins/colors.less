@@ -1,0 +1,8 @@
+// Define css color rule as contrast of background color.
+.contrast-color-for(@bg-color, @black-color: @night-black, @white-color: @seasalt-white) {
+  color: contrast(@bg-color, @black-color, @white-color);
+}
+
+.selected-bg-color-overlay(@bg-color) {
+  background-color: fade(contrast(@bg-color, @night-black, @seasalt-white), 25%);
+}

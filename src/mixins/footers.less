@@ -1,0 +1,5 @@
+.footer-color(@bg-color, @dark-mode: false) {
+  background-color: @bg-color;
+  .contrast-color-for(@bg-color);
+  border-top: .2rem solid if(@dark-mode, lighten(@bg-color, 20%), darken(@bg-color, 20%));
+}

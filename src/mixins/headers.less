@@ -1,0 +1,5 @@
+.header-color(@bg-color, @dark-mode: false) {
+  background-color: @bg-color;
+  .contrast-color-for(@bg-color);
+  border-bottom: .2rem solid if(@dark-mode, lighten(@bg-color, 10%), darken(@bg-color, 10%));
+}

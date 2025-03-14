@@ -1,5 +1,36 @@
 // ---- DEFAULT MODE ----
+// Headers
 .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  height: @header-height;
+
+  // Header color modes
+  // Default
+  .header-color(@base-color);
+
+  // Primary
+  &.primary {
+    .header-color(@primary-color);
+  }
+
+  // Secondary
+  &.secondary {
+    .header-color(@secondary-color);
+  }
+
+  // Tertiary
+  &.tertiary {
+    .header-color(@tertiary-color);
+  }
+
+  // Position modes
+  &.sticky {
+    position: sticky;
+    top: 0;
+  }
 
   // Brand link: logo or site name
   .brand-link {
@@ -17,15 +48,16 @@
     }
   }
 
+  // Navigation
   nav {
     &.centered {
-      flex: 1; // Take up available space
+      flex: 1;
       display: flex;
       align-items: center;
       justify-content: center;
       
       ul {
-        justify-content: center; // Center the navigation items
+        justify-content: center;
       }
     }
 
@@ -47,6 +79,11 @@
     a {
       padding: @header-element-padding;
       text-decoration: none;
+      border-radius: @header-nav-border-radius;
+
+      &:hover, &.selected {
+        .selected-bg-color-overlay(@base-color);
+      }
     }
   }
 
@@ -57,20 +94,8 @@
 
     nav a {
       color: contrast(@primary-color);
-    }
-  }
-}
-
-// ---- DARK MODE ----
-@media (prefers-color-scheme: dark) {
-  .header {
-    nav a {
-      color: contrast(@base-color-dark);
-    }
-
-    &.primary {
-      nav a {
-        color: contrast(@primary-color-dark);
+      &:hover, &.selected {
+        .selected-bg-color-overlay(@primary-color);
       }
     }
   }

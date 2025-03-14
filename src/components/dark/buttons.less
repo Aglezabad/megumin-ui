@@ -1,0 +1,23 @@
+button {
+  background-color: @button-base-color-dark;
+  .contrast-color-for(@button-base-color-dark);
+
+  &:hover {
+    .selected-bg-color-overlay(@button-base-color-dark);
+  }
+
+  &.primary {
+    background-color: @primary-color-dark;
+    .contrast-color-for(@primary-color-dark);
+  }
+
+  &.secondary {
+    background-color: @secondary-color-dark;
+    .contrast-color-for(@secondary-color-dark);
+  }
+
+  &.tertiary {
+    background-color: @tertiary-color-dark;
+    .contrast-color-for(@tertiary-color-dark);
+  }
+}

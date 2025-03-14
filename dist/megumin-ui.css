@@ -10,7 +10,7 @@ html {
 }
 body {
   background-color: #f8f8f8;
-  color: #000000;
+  color: #0a0a0a;
   margin: 0;
 }
 body.screen-size {
@@ -21,12 +21,6 @@ body .container {
   margin: 0 auto;
   padding: 1rem;
 }
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #0a0a0a;
-    color: #ffffff;
-  }
-}
 .header {
   display: flex;
   align-items: center;
@@ -34,49 +28,27 @@ body .container {
   padding: 0;
   height: 4rem;
   background-color: #f8f8f8;
-  color: #000000;
-  border-bottom: 0.2rem solid #c5c5c5;
+  color: #0a0a0a;
+  border-bottom: 0.2rem solid #dfdfdf;
 }
 .header.primary {
   background-color: #8a0000;
-  color: #ffffff;
-  border-bottom: 0.2rem solid #240000;
+  color: #f8f8f8;
+  border-bottom: 0.2rem solid #570000;
 }
 .header.secondary {
   background-color: #b08100;
-  color: #ffffff;
-  border-bottom: 0.2rem solid #4a3600;
+  color: #f8f8f8;
+  border-bottom: 0.2rem solid #7d5c00;
 }
 .header.tertiary {
   background-color: #563636;
-  color: #ffffff;
-  border-bottom: 0.2rem solid #170f0f;
+  color: #f8f8f8;
+  border-bottom: 0.2rem solid #372222;
 }
 .header.sticky {
   position: sticky;
   top: 0;
-}
-@media (prefers-color-scheme: dark) {
-  .header {
-    background-color: #0a0a0a;
-    color: #ffffff;
-    border-bottom: 0.2rem solid #3d3d3d;
-  }
-  .header.primary {
-    background-color: #710000;
-    color: #ffffff;
-    border-bottom: 0.2rem solid #d70000;
-  }
-  .header.secondary {
-    background-color: #976e00;
-    color: #ffffff;
-    border-bottom: 0.2rem solid #fdb900;
-  }
-  .header.tertiary {
-    background-color: #462c2c;
-    color: #ffffff;
-    border-bottom: 0.2rem solid #855454;
-  }
 }
 .header .brand-link {
   display: flex;
@@ -122,14 +94,6 @@ body .container {
 .header.primary nav a {
   color: #ffffff;
 }
-@media (prefers-color-scheme: dark) {
-  .header nav a {
-    color: #ffffff;
-  }
-  .header.primary nav a {
-    color: #ffffff;
-  }
-}
 .footer {
   display: flex;
   align-items: center;
@@ -137,22 +101,22 @@ body .container {
   padding: 0;
   height: 4rem;
   background-color: #f8f8f8;
-  color: #000000;
+  color: #0a0a0a;
   border-top: 0.2rem solid #c5c5c5;
 }
 .footer.primary {
   background-color: #8a0000;
-  color: #ffffff;
+  color: #f8f8f8;
   border-top: 0.2rem solid #240000;
 }
 .footer.secondary {
   background-color: #b08100;
-  color: #ffffff;
+  color: #f8f8f8;
   border-top: 0.2rem solid #4a3600;
 }
 .footer.tertiary {
   background-color: #563636;
-  color: #ffffff;
+  color: #f8f8f8;
   border-top: 0.2rem solid #170f0f;
 }
 .footer.fixed {
@@ -165,33 +129,63 @@ body .container {
   position: sticky;
   bottom: 0;
 }
-@media (prefers-color-scheme: dark) {
-  .footer {
-    background-color: #0a0a0a;
-    color: #ffffff;
-    border-top: 0.2rem solid #3d3d3d;
-  }
-  .footer.primary {
-    background-color: #710000;
-    color: #ffffff;
-    border-top: 0.2rem solid #d70000;
-  }
-  .footer.secondary {
-    background-color: #976e00;
-    color: #ffffff;
-    border-top: 0.2rem solid #fdb900;
-  }
-  .footer.tertiary {
-    background-color: #462c2c;
-    color: #ffffff;
-    border-top: 0.2rem solid #855454;
-  }
-}
 a {
   color: #b08100;
 }
 @media (prefers-color-scheme: dark) {
   a {
     color: #976e00;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #0a0a0a;
+    color: #f8f8f8;
+  }
+  .header {
+    background-color: #0a0a0a;
+    color: #f8f8f8;
+    border-bottom: 0.2rem solid #242424;
+  }
+  .header.primary {
+    background-color: #710000;
+    color: #f8f8f8;
+    border-bottom: 0.2rem solid #a30000;
+  }
+  .header.secondary {
+    background-color: #976e00;
+    color: #f8f8f8;
+    border-bottom: 0.2rem solid #ca9400;
+  }
+  .header.tertiary {
+    background-color: #462c2c;
+    color: #f8f8f8;
+    border-bottom: 0.2rem solid #664040;
+  }
+  .header nav a {
+    color: #ffffff;
+  }
+  .header.primary nav a {
+    color: #ffffff;
+  }
+  .footer {
+    background-color: #0a0a0a;
+    color: #f8f8f8;
+    border-top: 0.2rem solid #3d3d3d;
+  }
+  .footer.primary {
+    background-color: #710000;
+    color: #f8f8f8;
+    border-top: 0.2rem solid #d70000;
+  }
+  .footer.secondary {
+    background-color: #976e00;
+    color: #f8f8f8;
+    border-top: 0.2rem solid #fdb900;
+  }
+  .footer.tertiary {
+    background-color: #462c2c;
+    color: #f8f8f8;
+    border-top: 0.2rem solid #855454;
   }
 }

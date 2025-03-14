@@ -1,0 +1,38 @@
+// Headers
+.header {
+  // Header color modes
+  // Default
+  .header-color(@base-color-dark, true);
+
+  // Primary
+  &.primary {
+    .header-color(@primary-color-dark, true);
+  }
+
+  // Secondary
+  &.secondary {
+    .header-color(@secondary-color-dark, true);
+  }
+
+  // Tertiary
+  &.tertiary {
+    .header-color(@tertiary-color-dark, true);
+  }
+
+  // Navigation
+  nav a {
+    .contrast-color-for(@base-color-dark);
+    &:hover, &.selected {
+      .selected-bg-color-overlay(@base-color-dark);
+    }
+  }
+
+  &.primary {
+    nav a {
+      .contrast-color-for(@primary-color-dark);
+      &:hover, &.selected {
+        .selected-bg-color-overlay(@primary-color-dark);
+      }
+    }
+  }
+}

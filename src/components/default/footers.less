@@ -1,0 +1,41 @@
+// ---- DEFAULT MODE ----
+// Footers
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  height: @footer-height;
+
+  // Footer color modes
+  // Default
+  .footer-color(@base-color);
+
+  // Primary
+  &.primary {
+    .footer-color(@primary-color);
+  }
+
+  // Secondary
+  &.secondary {
+    .footer-color(@secondary-color);
+  }
+
+  // Tertiary
+  &.tertiary {
+    .footer-color(@tertiary-color);
+  }
+
+  // Position modes
+  &.fixed {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &.sticky {
+    position: sticky;
+    bottom: 0;
+  }
+}

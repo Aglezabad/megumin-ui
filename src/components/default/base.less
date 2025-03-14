@@ -5,7 +5,7 @@ html {
 
 body {
   background-color: @base-color;
-  color: contrast(@base-color);
+  .contrast-color-for(@base-color);
   margin: 0;
 
   &.screen-size {
@@ -16,13 +16,5 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem;
-  }
-}
-
-// ---- DARK MODE ----
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: @base-color-dark;
-    color: contrast(@base-color-dark);
   }
 }

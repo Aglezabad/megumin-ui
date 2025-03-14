@@ -8,4 +8,4 @@ if ! command -v lessc > /dev/null 2>&1; then
 fi
 echo "Generating dist files..."
 lessc $PWD/../src/main.less $PWD/../dist/megumin-ui.css
-lessc $PWD/../src/main.less $PWD/../dist/megumin-ui.min.css
+lessc $PWD/../src/main.less $PWD/../dist/megumin-ui.min.css --clean-css="--s1 --advanced"

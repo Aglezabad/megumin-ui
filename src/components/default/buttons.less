@@ -1,0 +1,40 @@
+button {
+  border: none;
+  outline: none;
+  background: none;
+  font-family: inherit;
+  cursor: pointer;
+
+  padding: @button-padding;
+  border-radius: @button-border-radius;
+  background-color: @button-base-color;
+  .contrast-color-for(@button-base-color);
+
+  &:hover {
+    .selected-bg-color-overlay(@button-base-color);
+  }
+
+  &.primary {
+    background-color: @primary-color;
+    .contrast-color-for(@primary-color);
+    &:hover {
+      .selected-bg-color-overlay(@primary-color);
+    }
+  }
+
+  &.secondary {
+    background-color: @secondary-color;
+    .contrast-color-for(@secondary-color);
+    &:hover {
+      .selected-bg-color-overlay(@secondary-color);
+    }
+  }
+
+  &.tertiary {
+    background-color: @tertiary-color;
+    .contrast-color-for(@tertiary-color);
+    &:hover {
+      .selected-bg-color-overlay(@tertiary-color);
+    }
+  }
+}
