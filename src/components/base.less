@@ -1,0 +1,28 @@
+// ---- DEFAULT MODE ----
+html {
+  height: 100%;
+}
+
+body {
+  background-color: @base-color;
+  color: contrast(@base-color);
+  margin: 0;
+
+  &.screen-size {
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+}
+
+// ---- DARK MODE ----
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: @base-color-dark;
+    color: contrast(@base-color-dark);
+  }
+}
