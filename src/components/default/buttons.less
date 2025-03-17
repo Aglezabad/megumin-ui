@@ -1,23 +1,52 @@
 button {
+  position: relative;
   border: none;
   outline: none;
   background: none;
   font-family: inherit;
   cursor: pointer;
 
+  font-weight: 700;
   padding: @button-padding;
   border-radius: @button-border-radius;
   background-color: @button-base-color;
   .contrast-color-for(@button-base-color);
 
-  &:hover {
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: @button-border-radius;
     .selected-bg-color-overlay(@button-base-color);
+    opacity: 0;
+    transition: opacity @button-hover-transition;
   }
 
+  &:hover::after {
+    opacity: 1;
+  }
+
+  // Button sizes
+  &.small {
+    padding: @button-padding * 0.5;
+  }
+
+  &.large {
+    padding: @button-padding * 1.5;
+  }
+
+  &.x-large {
+    padding: @button-padding * 2;
+  }
+
+  // Button colors
   &.primary {
     background-color: @primary-color;
     .contrast-color-for(@primary-color);
-    &:hover {
+    &::after {
       .selected-bg-color-overlay(@primary-color);
     }
   }
@@ -25,7 +54,7 @@ button {
   &.secondary {
     background-color: @secondary-color;
     .contrast-color-for(@secondary-color);
-    &:hover {
+    &::after {
       .selected-bg-color-overlay(@secondary-color);
     }
   }
@@ -33,7 +62,7 @@ button {
   &.tertiary {
     background-color: @tertiary-color;
     .contrast-color-for(@tertiary-color);
-    &:hover {
+    &::after {
       .selected-bg-color-overlay(@tertiary-color);
     }
   }

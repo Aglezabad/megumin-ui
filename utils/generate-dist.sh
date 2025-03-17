@@ -9,3 +9,7 @@ fi
 echo "Generating dist files..."
 lessc $PWD/../src/main.less $PWD/../dist/megumin-ui.css
 lessc $PWD/../src/main.less $PWD/../dist/megumin-ui.min.css --clean-css="--s1 --advanced"
+echo "Generating no-dark dist files..."
+lessc $PWD/../src/main-nodark.less $PWD/../dist/megumin-ui-no-dark.css
+lessc $PWD/../src/main-nodark.less $PWD/../dist/megumin-ui-no-dark.min.css --clean-css="--s1 --advanced"
+echo "Done."
