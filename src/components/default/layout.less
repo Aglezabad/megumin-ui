@@ -1,0 +1,107 @@
+// Flex Container
+.flex {
+  display: flex;
+  
+  // Direction
+  &.row { flex-direction: row; }
+  &.row-reverse { flex-direction: row-reverse; }
+  &.column { flex-direction: column; }
+  &.column-reverse { flex-direction: column-reverse; }
+  
+  // Wrap
+  &.wrap { flex-wrap: wrap; }
+  &.nowrap { flex-wrap: nowrap; }
+  &.wrap-reverse { flex-wrap: wrap-reverse; }
+  
+  // Justify Content
+  &.justify-start { justify-content: flex-start; }
+  &.justify-end { justify-content: flex-end; }
+  &.justify-center { justify-content: center; }
+  &.justify-between { justify-content: space-between; }
+  &.justify-around { justify-content: space-around; }
+  &.justify-evenly { justify-content: space-evenly; }
+  
+  // Align Items
+  &.items-start { align-items: flex-start; }
+  &.items-end { align-items: flex-end; }
+  &.items-center { align-items: center; }
+  &.items-baseline { align-items: baseline; }
+  &.items-stretch { align-items: stretch; }
+  
+  // Align Content
+  &.content-start { align-content: flex-start; }
+  &.content-end { align-content: flex-end; }
+  &.content-center { align-content: center; }
+  &.content-between { align-content: space-between; }
+  &.content-around { align-content: space-around; }
+  &.content-stretch { align-content: stretch; }
+}
+
+// Flex Item
+.flex-item {
+  // Grow
+  &.grow-0 { flex-grow: 0; }
+  &.grow-1 { flex-grow: 1; }
+  
+  // Shrink
+  &.shrink-0 { flex-shrink: 0; }
+  &.shrink-1 { flex-shrink: 1; }
+  
+  // Basis
+  &.basis-auto { flex-basis: auto; }
+  &.basis-0 { flex-basis: 0; }
+  &.basis-full { flex-basis: 100%; }
+}
+
+// Grid Container
+.grid {
+  display: grid;
+  gap: @grid-gap;
+  
+  // Basic Grid Patterns
+  &.cols-2 { grid-template-columns: repeat(2, 1fr); }
+  &.cols-3 { grid-template-columns: repeat(3, 1fr); }
+  &.cols-4 { grid-template-columns: repeat(4, 1fr); }
+  &.cols-6 { grid-template-columns: repeat(6, 1fr); }
+  &.cols-12 { grid-template-columns: repeat(12, 1fr); }
+  
+  // Alignment
+  &.place-center { place-items: center; }
+  &.place-start { place-items: start; }
+  &.place-end { place-items: end; }
+  
+  // Auto Flow
+  &.flow-row { grid-auto-flow: row; }
+  &.flow-col { grid-auto-flow: column; }
+}
+
+// Grid Item
+.grid-item {
+  // Span
+  &.col-span-2 { grid-column: span 2; }
+  &.col-span-3 { grid-column: span 3; }
+  &.col-span-4 { grid-column: span 4; }
+  &.col-span-6 { grid-column: span 6; }
+  &.col-span-12 { grid-column: span 12; }
+  
+  // Alignment
+  &.self-start { justify-self: start; }
+  &.self-center { justify-self: center; }
+  &.self-end { justify-self: end; }
+}
+
+// Responsive Grid
+@media (max-width: 768px) {
+  .grid {
+    &.cols-2,
+    &.cols-3,
+    &.cols-4 {
+      grid-template-columns: 1fr;
+    }
+    
+    &.cols-6,
+    &.cols-12 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

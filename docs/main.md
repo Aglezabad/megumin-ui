@@ -1,5 +1,7 @@
 # Megumin UI Documentation
 
+*This is a draft version and it's not accurate.*
+
 A lightweight, dark-mode ready CSS framework focusing on simplicity and modern design.
 
 ## Table of Contents

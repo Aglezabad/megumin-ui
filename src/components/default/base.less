@@ -14,7 +14,11 @@ body {
   .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem;
+    padding: @div-padding;
+
+    div {
+      padding: @div-padding;
+    }
   }
 }
 
@@ -58,4 +62,20 @@ h6 {
 // Links
 a {
   color: @link-color;
+}
+
+// Backgrounds
+.bg-primary {
+  background-color: @primary-color;
+  .contrast-color-for(@primary-color);
+}
+
+.bg-secondary {
+  background-color: @secondary-color;
+  .contrast-color-for(@secondary-color);
+}
+
+.bg-tertiary {
+  background-color: @tertiary-color;
+  .contrast-color-for(@tertiary-color);
 }
