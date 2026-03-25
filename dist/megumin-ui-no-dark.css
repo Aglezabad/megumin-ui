@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'lansui';
-  src: local('lansui'), url('./lansui/Iansui-Regular.ttf') format('truetype');
+  src: local('lansui'), url('./lansui/Iansui-Regular-latin.woff2') format('woff2');
 }
 html {
   font-family: 'lansui', system-ui, sans-serif;
