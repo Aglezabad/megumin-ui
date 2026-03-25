@@ -1,0 +1,186 @@
+// Text inputs (excludes button-like, toggle, and custom types)
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="range"]):not([type="color"]):not([type="file"]),
+textarea,
+select {
+  font-family: inherit;
+  font-size: @form-font-size;
+  line-height: 1.5;
+  padding: @form-padding;
+  min-height: @form-min-height;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: @form-border-radius;
+  border: @form-border-width solid @form-border-color;
+  background-color: @form-bg-color;
+  .contrast-color-for(@form-bg-color);
+  outline: none;
+  transition: border-color @form-transition, box-shadow @form-transition;
+
+  &:hover:not(:disabled) {
+    border-color: darken(@form-border-color, 10%);
+  }
+
+  &:focus {
+    border-color: @form-focus-color;
+    box-shadow: 0 0 0 .125rem fade(@form-focus-color, 25%);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  &.primary {
+    &:hover:not(:disabled) {
+      border-color: darken(@primary-color, 10%);
+    }
+    &:focus {
+      border-color: @primary-color;
+      box-shadow: 0 0 0 .125rem fade(@primary-color, 25%);
+    }
+  }
+
+  &.secondary {
+    &:hover:not(:disabled) {
+      border-color: darken(@secondary-color, 10%);
+    }
+    &:focus {
+      border-color: @secondary-color;
+      box-shadow: 0 0 0 .125rem fade(@secondary-color, 25%);
+    }
+  }
+
+  &.tertiary {
+    &:hover:not(:disabled) {
+      border-color: darken(@tertiary-color, 10%);
+    }
+    &:focus {
+      border-color: @tertiary-color;
+      box-shadow: 0 0 0 .125rem fade(@tertiary-color, 25%);
+    }
+  }
+}
+
+textarea {
+  min-height: @form-textarea-min-height;
+  resize: vertical;
+}
+
+select {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2 5l6 6 6-6' stroke='@{form-select-arrow-color}' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right .75rem center;
+  background-size: 1rem;
+  padding-right: 2.5rem;
+}
+
+// Checkboxes and radios
+input[type="checkbox"],
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  width: @form-checkbox-size;
+  height: @form-checkbox-size;
+  min-height: unset;
+  border: @form-border-width solid @form-border-color;
+  background-color: @form-bg-color;
+  cursor: pointer;
+  flex-shrink: 0;
+  vertical-align: middle;
+  transition: background-color @form-transition, border-color @form-transition, box-shadow @form-transition;
+
+  &:hover:not(:disabled) {
+    border-color: @form-focus-color;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 .125rem fade(@form-focus-color, 25%);
+  }
+
+  &:checked {
+    background-color: @form-focus-color;
+    border-color: @form-focus-color;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  &.primary {
+    &:hover:not(:disabled) {
+      border-color: @primary-color;
+    }
+    &:focus {
+      box-shadow: 0 0 0 .125rem fade(@primary-color, 25%);
+    }
+    &:checked {
+      background-color: @primary-color;
+      border-color: @primary-color;
+    }
+  }
+
+  &.secondary {
+    &:hover:not(:disabled) {
+      border-color: @secondary-color;
+    }
+    &:focus {
+      box-shadow: 0 0 0 .125rem fade(@secondary-color, 25%);
+    }
+    &:checked {
+      background-color: @secondary-color;
+      border-color: @secondary-color;
+    }
+  }
+
+  &.tertiary {
+    &:hover:not(:disabled) {
+      border-color: @tertiary-color;
+    }
+    &:focus {
+      box-shadow: 0 0 0 .125rem fade(@tertiary-color, 25%);
+    }
+    &:checked {
+      background-color: @tertiary-color;
+      border-color: @tertiary-color;
+    }
+  }
+}
+
+input[type="checkbox"] {
+  border-radius: @form-border-radius;
+
+  &:checked::after {
+    content: '';
+    position: absolute;
+    top: .0625rem;
+    left: .25rem;
+    width: .3125rem;
+    height: .625rem;
+    border: .125rem solid @seasalt-white;
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg);
+  }
+}
+
+input[type="radio"] {
+  border-radius: 50%;
+
+  &:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+    background-color: @seasalt-white;
+  }
+}
