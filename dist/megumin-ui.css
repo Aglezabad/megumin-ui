@@ -458,6 +458,69 @@ button.tertiary::after {
   position: sticky;
   bottom: 0;
 }
+.alert {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  border-left: 0.3rem solid #acacac;
+  background-color: #dfdfdf;
+  color: #0a0a0a;
+}
+.alert button.dismiss {
+  flex-shrink: 0;
+  min-height: auto;
+  min-width: auto;
+  padding: 0 0.25rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  background-color: transparent;
+  color: inherit;
+  opacity: 0.6;
+}
+.alert button.dismiss::after {
+  background-color: currentColor;
+}
+.alert button.dismiss:hover {
+  opacity: 1;
+}
+.alert.primary {
+  background-color: #8a0000;
+  color: #f8f8f8;
+  border-left-color: #3d0000;
+}
+.alert.secondary {
+  background-color: #b08100;
+  color: #f8f8f8;
+  border-left-color: #644900;
+}
+.alert.tertiary {
+  background-color: #563636;
+  color: #f8f8f8;
+  border-left-color: #271818;
+}
+.alert.success {
+  background-color: #1e6b45;
+  color: #f8f8f8;
+  border-left-color: #0d2f1e;
+}
+.alert.error {
+  background-color: #8a1a00;
+  color: #f8f8f8;
+  border-left-color: #3d0c00;
+}
+.alert.warning {
+  background-color: #8a6200;
+  color: #f8f8f8;
+  border-left-color: #3d2c00;
+}
+.alert.info {
+  background-color: #1a3d6e;
+  color: #f8f8f8;
+  border-left-color: #0b1b30;
+}
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #0a0a0a;
@@ -593,5 +656,45 @@ button.tertiary::after {
     background-color: #462c2c;
     color: #f8f8f8;
     border-top: 0.2rem solid #855454;
+  }
+  .alert {
+    background-color: #242424;
+    color: #f8f8f8;
+    border-left-color: #707070;
+  }
+  .alert.primary {
+    background-color: #710000;
+    color: #f8f8f8;
+    border-left-color: #bd0000;
+  }
+  .alert.secondary {
+    background-color: #976e00;
+    color: #f8f8f8;
+    border-left-color: #e3a600;
+  }
+  .alert.tertiary {
+    background-color: #462c2c;
+    color: #f8f8f8;
+    border-left-color: #754a4a;
+  }
+  .alert.success {
+    background-color: #247f52;
+    color: #f8f8f8;
+    border-left-color: #34bb78;
+  }
+  .alert.error {
+    background-color: #a31f00;
+    color: #f8f8f8;
+    border-left-color: #f02d00;
+  }
+  .alert.warning {
+    background-color: #a37400;
+    color: #f8f8f8;
+    border-left-color: #f0aa00;
+  }
+  .alert.info {
+    background-color: #1f4883;
+    color: #f8f8f8;
+    border-left-color: #2e6bc1;
   }
 }

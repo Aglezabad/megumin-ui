@@ -1,0 +1,5 @@
+.alert-color(@bg-color, @dark-mode: false) {
+  background-color: @bg-color;
+  .contrast-color-for(@bg-color);
+  border-left-color: if(@dark-mode, lighten(@bg-color, 15%), darken(@bg-color, 15%));
+}

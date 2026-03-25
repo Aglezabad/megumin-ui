@@ -12,6 +12,7 @@ A lightweight, dark-mode ready CSS framework focusing on simplicity and modern d
    - [Layout](#layout)
    - [Typography](#typography)
    - [Buttons](#buttons)
+   - [Alerts](#alerts)
    - [Footers](#footers)
 3. [Theming](#theming)
    - [Colors](#colors)
@@ -97,6 +98,53 @@ Various button styles and sizes:
 <button disabled>Disabled Button</button>
 ```
 
+### Alerts
+
+Alert and banner components for surfacing feedback to the user. Alerts support the existing color palette (primary, secondary, tertiary) as well as semantic state variants (success, error, warning, info). An optional dismiss affordance can be included as a `button.dismiss` inside the alert.
+
+```html
+<!-- Default alert -->
+<div class="alert" role="alert">
+  <span>This is a default alert message.</span>
+</div>
+
+<!-- Palette color variants -->
+<div class="alert primary" role="alert">
+  <span>This is a primary (brand) alert.</span>
+</div>
+
+<div class="alert secondary" role="alert">
+  <span>This is a secondary alert.</span>
+</div>
+
+<div class="alert tertiary" role="alert">
+  <span>This is a tertiary alert.</span>
+</div>
+
+<!-- Semantic state variants -->
+<div class="alert success" role="alert">
+  <span>Operation completed successfully.</span>
+</div>
+
+<div class="alert error" role="alert">
+  <span>An error occurred. Please try again.</span>
+</div>
+
+<div class="alert warning" role="alert">
+  <span>Warning: this action cannot be undone.</span>
+</div>
+
+<div class="alert info" role="alert">
+  <span>Here is some helpful information.</span>
+</div>
+
+<!-- With optional dismiss button -->
+<div class="alert success" role="alert">
+  <span>Your changes have been saved.</span>
+  <button class="dismiss" aria-label="Dismiss" onclick="this.closest('.alert').remove()">&#x2715;</button>
+</div>
+```
+
 ### Footers
 
 Flexible footer components:
@@ -135,6 +183,12 @@ Customize your theme:
 @secondary-color-dark: #4a90e2;
 @tertiary-color-dark: #50e3c2;
 @base-color-dark: #1a1a1a;
+
+// Alert semantic state colors
+@alert-success-color: #1e6b45;
+@alert-error-color: #8a1a00;
+@alert-warning-color: #8a6200;
+@alert-info-color: #1a3d6e;
 ```
 
 ### Dark Mode

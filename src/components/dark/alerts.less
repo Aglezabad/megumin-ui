@@ -1,0 +1,33 @@
+.alert {
+  background-color: @button-base-color-dark;
+  .contrast-color-for(@button-base-color-dark);
+  border-left-color: lighten(@button-base-color-dark, 30%);
+
+  &.primary {
+    .alert-color(@primary-color-dark, @dark-mode: true);
+  }
+
+  &.secondary {
+    .alert-color(@secondary-color-dark, @dark-mode: true);
+  }
+
+  &.tertiary {
+    .alert-color(@tertiary-color-dark, @dark-mode: true);
+  }
+
+  &.success {
+    .alert-color(@alert-success-color-dark, @dark-mode: true);
+  }
+
+  &.error {
+    .alert-color(@alert-error-color-dark, @dark-mode: true);
+  }
+
+  &.warning {
+    .alert-color(@alert-warning-color-dark, @dark-mode: true);
+  }
+
+  &.info {
+    .alert-color(@alert-info-color-dark, @dark-mode: true);
+  }
+}

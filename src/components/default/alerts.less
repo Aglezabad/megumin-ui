@@ -1,0 +1,64 @@
+// ---- DEFAULT MODE ----
+// Alerts
+.alert {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: @alert-padding;
+  border-radius: @alert-border-radius;
+  border-left: .3rem solid darken(@button-base-color, 20%);
+  background-color: @button-base-color;
+  .contrast-color-for(@button-base-color);
+
+  // Optional dismiss button
+  button.dismiss {
+    flex-shrink: 0;
+    min-height: auto;
+    min-width: auto;
+    padding: 0 .25rem;
+    font-size: 1.25rem;
+    font-weight: 400;
+    background-color: transparent;
+    color: inherit;
+    opacity: 0.6;
+
+    &::after {
+      background-color: currentColor;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  // Color variants using existing palette
+  &.primary {
+    .alert-color(@primary-color);
+  }
+
+  &.secondary {
+    .alert-color(@secondary-color);
+  }
+
+  &.tertiary {
+    .alert-color(@tertiary-color);
+  }
+
+  // Semantic state variants
+  &.success {
+    .alert-color(@alert-success-color);
+  }
+
+  &.error {
+    .alert-color(@alert-error-color);
+  }
+
+  &.warning {
+    .alert-color(@alert-warning-color);
+  }
+
+  &.info {
+    .alert-color(@alert-info-color);
+  }
+}
