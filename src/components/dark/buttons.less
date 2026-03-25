@@ -6,6 +6,10 @@ button {
     .selected-bg-color-overlay(@button-base-color-dark);
   }
 
+  &:focus-visible {
+    outline-color: lighten(@primary-color, 30%);
+  }
+
   &.primary {
     background-color: @primary-color-dark;
     .contrast-color-for(@primary-color-dark);
@@ -20,6 +24,9 @@ button {
     &::after {
       .selected-bg-color-overlay(@secondary-color-dark);
     }
+    &:focus-visible {
+      outline-color: lighten(@secondary-color, 30%);
+    }
   }
 
   &.tertiary {
@@ -27,6 +34,9 @@ button {
     .contrast-color-for(@tertiary-color-dark);
     &::after {
       .selected-bg-color-overlay(@tertiary-color-dark);
+    }
+    &:focus-visible {
+      outline-color: lighten(@tertiary-color, 30%);
     }
   }
 }

@@ -270,6 +270,10 @@ button::after {
 button:hover::after {
   opacity: 1;
 }
+button:focus-visible {
+  outline: 2px solid #8a0000;
+  outline-offset: 2px;
+}
 button.small {
   padding: 0.25rem;
   min-height: 2rem;
@@ -306,12 +310,18 @@ button.secondary {
 button.secondary::after {
   background-color: rgba(248, 248, 248, 0.25);
 }
+button.secondary:focus-visible {
+  outline-color: #b08100;
+}
 button.tertiary {
   background-color: #563636;
   color: #f8f8f8;
 }
 button.tertiary::after {
   background-color: rgba(248, 248, 248, 0.25);
+}
+button.tertiary:focus-visible {
+  outline-color: #563636;
 }
 @media (max-width: 768px) {
   button {
