@@ -1,0 +1,47 @@
+// ---- DEFAULT MODE ----
+// Tables
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  thead {
+    background-color: darken(@base-color, 10%);
+
+    tr th {
+      padding: @table-cell-padding;
+      text-align: left;
+      font-weight: 700;
+      .contrast-color-for(darken(@base-color, 10%));
+      border-bottom: .2rem solid darken(@base-color, 20%);
+    }
+  }
+
+  tbody {
+    tr {
+      &:nth-child(even) {
+        background-color: darken(@base-color, 5%);
+      }
+
+      &:hover {
+        background-color: darken(@base-color, 8%);
+      }
+
+      &:nth-child(even):hover {
+        background-color: darken(@base-color, 13%);
+      }
+
+      td {
+        padding: @table-cell-padding;
+        border-bottom: .1rem solid darken(@base-color, 10%);
+      }
+    }
+  }
+}
+
+// Responsive overflow wrapper
+.table-responsive {
+  overflow-x: auto;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+}

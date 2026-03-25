@@ -1,0 +1,32 @@
+// ---- DARK MODE ----
+// Tables
+table {
+  thead {
+    background-color: lighten(@base-color-dark, 10%);
+
+    tr th {
+      .contrast-color-for(lighten(@base-color-dark, 10%));
+      border-bottom: .2rem solid lighten(@base-color-dark, 20%);
+    }
+  }
+
+  tbody {
+    tr {
+      &:nth-child(even) {
+        background-color: lighten(@base-color-dark, 5%);
+      }
+
+      &:hover {
+        background-color: lighten(@base-color-dark, 8%);
+      }
+
+      &:nth-child(even):hover {
+        background-color: lighten(@base-color-dark, 13%);
+      }
+
+      td {
+        border-bottom: .1rem solid lighten(@base-color-dark, 10%);
+      }
+    }
+  }
+}
