@@ -1,0 +1,27 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: inherit;
+  font-size: @badge-font-size;
+  font-weight: 700;
+  line-height: 1;
+  padding: @badge-padding;
+  border-radius: @badge-border-radius;
+  background-color: @button-base-color;
+  .contrast-color-for(@button-base-color);
+
+  &.primary {
+    background-color: @primary-color;
+    .contrast-color-for(@primary-color);
+  }
+
+  &.secondary {
+    background-color: @secondary-color;
+    .contrast-color-for(@secondary-color);
+  }
+
+  &.tertiary {
+    background-color: @tertiary-color;
+    .contrast-color-for(@tertiary-color);
+  }
+}

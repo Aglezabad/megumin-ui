@@ -319,6 +319,30 @@ button.tertiary::after {
     padding: 0.5rem 1.25rem;
   }
 }
+.badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  background-color: #dfdfdf;
+  color: #0a0a0a;
+}
+.badge.primary {
+  background-color: #8a0000;
+  color: #f8f8f8;
+}
+.badge.secondary {
+  background-color: #b08100;
+  color: #f8f8f8;
+}
+.badge.tertiary {
+  background-color: #563636;
+  color: #f8f8f8;
+}
 .header {
   display: flex;
   align-items: center;

@@ -12,6 +12,7 @@ A lightweight, dark-mode ready CSS framework focusing on simplicity and modern d
    - [Layout](#layout)
    - [Typography](#typography)
    - [Buttons](#buttons)
+   - [Badges](#badges)
    - [Footers](#footers)
 3. [Theming](#theming)
    - [Colors](#colors)
@@ -95,6 +96,22 @@ Various button styles and sizes:
 
 <!-- States -->
 <button disabled>Disabled Button</button>
+```
+
+### Badges
+
+Inline status indicators and count labels:
+
+```html
+<!-- Colors -->
+<span class="badge">Default</span>
+<span class="badge primary">Primary</span>
+<span class="badge secondary">Secondary</span>
+<span class="badge tertiary">Tertiary</span>
+
+<!-- Usage examples -->
+<span>Pending tasks <span class="badge primary">3</span></span>
+<span>New messages <span class="badge secondary">12</span></span>
 ```
 
 ### Footers
