@@ -24,6 +24,10 @@
     .contrast-color-for(@base-color-dark);
   }
 
+  > a {
+    .contrast-color-for(@base-color-dark);
+  }
+
   nav a {
     .contrast-color-for(@base-color-dark);
     &:hover, &.selected {
@@ -33,6 +37,10 @@
 
   &.primary {
     .brand-link {
+      .contrast-color-for(@primary-color-dark);
+    }
+
+    > a {
       .contrast-color-for(@primary-color-dark);
     }
 
@@ -49,6 +57,10 @@
       .contrast-color-for(@secondary-color-dark);
     }
 
+    > a {
+      .contrast-color-for(@secondary-color-dark);
+    }
+
     nav a {
       .contrast-color-for(@secondary-color-dark);
       &:hover, &.selected {
@@ -59,6 +71,10 @@
 
   &.tertiary {
     .brand-link {
+      .contrast-color-for(@tertiary-color-dark);
+    }
+
+    > a {
       .contrast-color-for(@tertiary-color-dark);
     }
 
