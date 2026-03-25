@@ -3,8 +3,8 @@ html {
 }
 
 body {
-  background-color: @base-color;
-  .contrast-color-for(@base-color);
+  background-color: var(--mg-base-bg);
+  color: var(--mg-base-fg);
   margin: 0;
 
   &.screen-size {
@@ -24,7 +24,7 @@ body {
 
 // Headings
 h1, h2, h3, h4, h5, h6 {
-  .contrast-color-for(@base-color);
+  color: var(--mg-base-fg);
   margin: 1rem 0;
   font-weight: 700;
 }
@@ -61,21 +61,21 @@ h6 {
 
 // Links
 a {
-  color: @link-color;
+  color: var(--mg-link);
 }
 
 // Backgrounds
 .bg-primary {
-  background-color: @primary-color;
-  .contrast-color-for(@primary-color);
+  background-color: var(--mg-primary-bg);
+  color: var(--mg-primary-fg);
 }
 
 .bg-secondary {
-  background-color: @secondary-color;
-  .contrast-color-for(@secondary-color);
+  background-color: var(--mg-secondary-bg);
+  color: var(--mg-secondary-fg);
 }
 
 .bg-tertiary {
-  background-color: @tertiary-color;
-  .contrast-color-for(@tertiary-color);
+  background-color: var(--mg-tertiary-bg);
+  color: var(--mg-tertiary-fg);
 }

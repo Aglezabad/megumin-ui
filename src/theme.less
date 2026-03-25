@@ -41,3 +41,42 @@
 
 // ---- LAYOUT ----
 @grid-gap: 1rem;
+
+// ---- CSS CUSTOM PROPERTIES (light mode defaults) ----
+:root {
+  // Base
+  --mg-base-bg: @base-color;
+  --mg-base-fg: contrast(@base-color, @night-black, @seasalt-white);
+  --mg-base-overlay: fade(contrast(@base-color, @night-black, @seasalt-white), 25%);
+  --mg-base-header-border: darken(@base-color, 10%);
+  --mg-base-footer-border: darken(@base-color, 20%);
+
+  // Primary
+  --mg-primary-bg: @primary-color;
+  --mg-primary-fg: contrast(@primary-color, @night-black, @seasalt-white);
+  --mg-primary-overlay: fade(contrast(@primary-color, @night-black, @seasalt-white), 25%);
+  --mg-primary-header-border: darken(@primary-color, 10%);
+  --mg-primary-footer-border: darken(@primary-color, 20%);
+
+  // Secondary
+  --mg-secondary-bg: @secondary-color;
+  --mg-secondary-fg: contrast(@secondary-color, @night-black, @seasalt-white);
+  --mg-secondary-overlay: fade(contrast(@secondary-color, @night-black, @seasalt-white), 25%);
+  --mg-secondary-header-border: darken(@secondary-color, 10%);
+  --mg-secondary-footer-border: darken(@secondary-color, 20%);
+
+  // Tertiary
+  --mg-tertiary-bg: @tertiary-color;
+  --mg-tertiary-fg: contrast(@tertiary-color, @night-black, @seasalt-white);
+  --mg-tertiary-overlay: fade(contrast(@tertiary-color, @night-black, @seasalt-white), 25%);
+  --mg-tertiary-header-border: darken(@tertiary-color, 10%);
+  --mg-tertiary-footer-border: darken(@tertiary-color, 20%);
+
+  // Button base
+  --mg-btn-bg: @button-base-color;
+  --mg-btn-fg: contrast(@button-base-color, @night-black, @seasalt-white);
+  --mg-btn-overlay: fade(contrast(@button-base-color, @night-black, @seasalt-white), 25%);
+
+  // Link
+  --mg-link: @link-color;
+}
