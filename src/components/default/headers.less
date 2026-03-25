@@ -9,21 +9,29 @@
 
   // Header color modes
   // Default
-  .header-color(@base-color);
+  background-color: var(--mg-base-bg);
+  color: var(--mg-base-fg);
+  border-bottom: .2rem solid var(--mg-base-header-border);
 
   // Primary
   &.primary {
-    .header-color(@primary-color);
+    background-color: var(--mg-primary-bg);
+    color: var(--mg-primary-fg);
+    border-bottom: .2rem solid var(--mg-primary-header-border);
   }
 
   // Secondary
   &.secondary {
-    .header-color(@secondary-color);
+    background-color: var(--mg-secondary-bg);
+    color: var(--mg-secondary-fg);
+    border-bottom: .2rem solid var(--mg-secondary-header-border);
   }
 
   // Tertiary
   &.tertiary {
-    .header-color(@tertiary-color);
+    background-color: var(--mg-tertiary-bg);
+    color: var(--mg-tertiary-fg);
+    border-bottom: .2rem solid var(--mg-tertiary-header-border);
   }
 
   // Position modes
@@ -37,7 +45,7 @@
   .brand-link {
     display: flex;
     align-items: center;
-    .contrast-color-for(@base-color);
+    color: var(--mg-base-fg);
     height: @header-height - @header-element-padding;
     padding: @header-element-padding;
     text-decoration: none;
@@ -78,52 +86,52 @@
     }
 
     a {
-      .contrast-color-for(@base-color);
+      color: var(--mg-base-fg);
       padding: @header-element-padding;
       text-decoration: none;
       border-radius: @header-nav-border-radius;
 
       &:hover, &.selected {
-        .selected-bg-color-overlay(@base-color);
+        background-color: var(--mg-base-overlay);
       }
     }
   }
 
   &.primary {
     .brand-link {
-      .contrast-color-for(@primary-color);
+      color: var(--mg-primary-fg);
     }
 
     nav a {
-      .contrast-color-for(@primary-color);
+      color: var(--mg-primary-fg);
       &:hover, &.selected {
-        .selected-bg-color-overlay(@primary-color);
+        background-color: var(--mg-primary-overlay);
       }
     }
   }
 
   &.secondary {
     .brand-link {
-      .contrast-color-for(@secondary-color);
+      color: var(--mg-secondary-fg);
     }
 
     nav a {
-      .contrast-color-for(@secondary-color);
+      color: var(--mg-secondary-fg);
       &:hover, &.selected {
-        .selected-bg-color-overlay(@secondary-color);
+        background-color: var(--mg-secondary-overlay);
       }
     }
   }
 
   &.tertiary {
     .brand-link {
-      .contrast-color-for(@tertiary-color);
+      color: var(--mg-tertiary-fg);
     }
 
     nav a {
-      .contrast-color-for(@tertiary-color);
+      color: var(--mg-tertiary-fg);
       &:hover, &.selected {
-        .selected-bg-color-overlay(@tertiary-color);
+        background-color: var(--mg-tertiary-overlay);
       }
     }
   }
