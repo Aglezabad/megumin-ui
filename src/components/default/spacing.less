@@ -1,0 +1,45 @@
+// Spacing Utilities
+// Generates .m-*, .mt-*, .mb-*, .ml-*, .mr-*, .mx-*, .my-*
+//           .p-*, .pt-*, .pb-*, .pl-*, .pr-*, .px-*, .py-*
+// Scale: 0=0, 1=0.25rem, 2=0.5rem, 3=0.75rem, 4=1rem,
+//        5=1.25rem, 6=1.5rem, 8=2rem, 10=2.5rem, 12=3rem
+
+@spacing-scale: {
+  0: 0;
+  1: 0.25rem;
+  2: 0.5rem;
+  3: 0.75rem;
+  4: 1rem;
+  5: 1.25rem;
+  6: 1.5rem;
+  8: 2rem;
+  10: 2.5rem;
+  12: 3rem;
+}
+
+each(@spacing-scale, {
+  .m-@{key}  { margin: @value; }
+  .mt-@{key} { margin-top: @value; }
+  .mb-@{key} { margin-bottom: @value; }
+  .ml-@{key} { margin-left: @value; }
+  .mr-@{key} { margin-right: @value; }
+  .mx-@{key} { margin-left: @value; margin-right: @value; }
+  .my-@{key} { margin-top: @value; margin-bottom: @value; }
+
+  .p-@{key}  { padding: @value; }
+  .pt-@{key} { padding-top: @value; }
+  .pb-@{key} { padding-bottom: @value; }
+  .pl-@{key} { padding-left: @value; }
+  .pr-@{key} { padding-right: @value; }
+  .px-@{key} { padding-left: @value; padding-right: @value; }
+  .py-@{key} { padding-top: @value; padding-bottom: @value; }
+})
+
+// Auto margin helpers
+.m-auto  { margin: auto; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.my-auto { margin-top: auto; margin-bottom: auto; }
+.mt-auto { margin-top: auto; }
+.mb-auto { margin-bottom: auto; }
+.ml-auto { margin-left: auto; }
+.mr-auto { margin-right: auto; }
