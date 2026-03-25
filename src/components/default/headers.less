@@ -30,13 +30,14 @@
   &.sticky {
     position: sticky;
     top: 0;
+    z-index: 100;
   }
 
   // Brand link: logo or site name
   .brand-link {
     display: flex;
     align-items: center;
-    color: contrast(@base-color);
+    .contrast-color-for(@base-color);
     height: @header-height - @header-element-padding;
     padding: @header-element-padding;
     text-decoration: none;
@@ -77,6 +78,7 @@
     }
 
     a {
+      .contrast-color-for(@base-color);
       padding: @header-element-padding;
       text-decoration: none;
       border-radius: @header-nav-border-radius;
@@ -89,13 +91,39 @@
 
   &.primary {
     .brand-link {
-      color: contrast(@primary-color);
+      .contrast-color-for(@primary-color);
     }
 
     nav a {
-      color: contrast(@primary-color);
+      .contrast-color-for(@primary-color);
       &:hover, &.selected {
         .selected-bg-color-overlay(@primary-color);
+      }
+    }
+  }
+
+  &.secondary {
+    .brand-link {
+      .contrast-color-for(@secondary-color);
+    }
+
+    nav a {
+      .contrast-color-for(@secondary-color);
+      &:hover, &.selected {
+        .selected-bg-color-overlay(@secondary-color);
+      }
+    }
+  }
+
+  &.tertiary {
+    .brand-link {
+      .contrast-color-for(@tertiary-color);
+    }
+
+    nav a {
+      .contrast-color-for(@tertiary-color);
+      &:hover, &.selected {
+        .selected-bg-color-overlay(@tertiary-color);
       }
     }
   }
