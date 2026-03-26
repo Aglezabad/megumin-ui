@@ -12,4 +12,10 @@ lessc $PWD/../src/main.less $PWD/../dist/megumin-ui.min.css --clean-css="--s1 --
 echo "Generating no-dark dist files..."
 lessc $PWD/../src/main-nodark.less $PWD/../dist/megumin-ui-no-dark.css
 lessc $PWD/../src/main-nodark.less $PWD/../dist/megumin-ui-no-dark.min.css --clean-css="--s1 --advanced"
+echo "Generating no-layout dist files..."
+lessc $PWD/../src/main-nolayout.less $PWD/../dist/megumin-ui-no-layout.css
+lessc $PWD/../src/main-nolayout.less $PWD/../dist/megumin-ui-no-layout.min.css --clean-css="--s1 --advanced"
+echo "Generating no-dark no-layout dist files..."
+lessc $PWD/../src/main-nodark-nolayout.less $PWD/../dist/megumin-ui-no-dark-no-layout.css
+lessc $PWD/../src/main-nodark-nolayout.less $PWD/../dist/megumin-ui-no-dark-no-layout.min.css --clean-css="--s1 --advanced"
 echo "Done."

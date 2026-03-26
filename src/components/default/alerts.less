@@ -7,9 +7,9 @@
   gap: 1rem;
   padding: @alert-padding;
   border-radius: @alert-border-radius;
-  border-left: .3rem solid darken(@button-base-color, 20%);
-  background-color: @button-base-color;
-  .contrast-color-for(@button-base-color);
+  border-left: .3rem solid var(--mg-alert-border);
+  background-color: var(--mg-alert-bg);
+  color: var(--mg-alert-fg);
 
   // Optional dismiss button
   button.dismiss {
@@ -34,31 +34,45 @@
 
   // Color variants using existing palette
   &.primary {
-    .alert-color(@primary-color);
+    background-color: var(--mg-primary-bg);
+    color: var(--mg-primary-fg);
+    border-left-color: var(--mg-primary-header-border);
   }
 
   &.secondary {
-    .alert-color(@secondary-color);
+    background-color: var(--mg-secondary-bg);
+    color: var(--mg-secondary-fg);
+    border-left-color: var(--mg-secondary-header-border);
   }
 
   &.tertiary {
-    .alert-color(@tertiary-color);
+    background-color: var(--mg-tertiary-bg);
+    color: var(--mg-tertiary-fg);
+    border-left-color: var(--mg-tertiary-header-border);
   }
 
   // Semantic state variants
   &.success {
-    .alert-color(@alert-success-color);
+    background-color: var(--mg-alert-success-bg);
+    color: var(--mg-alert-success-fg);
+    border-left-color: var(--mg-alert-success-border);
   }
 
   &.error {
-    .alert-color(@alert-error-color);
+    background-color: var(--mg-alert-error-bg);
+    color: var(--mg-alert-error-fg);
+    border-left-color: var(--mg-alert-error-border);
   }
 
   &.warning {
-    .alert-color(@alert-warning-color);
+    background-color: var(--mg-alert-warning-bg);
+    color: var(--mg-alert-warning-fg);
+    border-left-color: var(--mg-alert-warning-border);
   }
 
   &.info {
-    .alert-color(@alert-info-color);
+    background-color: var(--mg-alert-info-bg);
+    color: var(--mg-alert-info-fg);
+    border-left-color: var(--mg-alert-info-border);
   }
 }

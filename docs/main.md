@@ -44,6 +44,24 @@ Or import in LESS:
 @import "megumin-ui/src/main.less";
 ```
 
+#### Opt-out variants
+
+If you do not need the layout utilities (flex/grid classes), use one of the smaller no-layout builds to reduce your CSS footprint:
+
+| File | Dark mode | Layout utilities |
+|------|-----------|------------------|
+| `dist/megumin-ui.css` | ✅ | ✅ |
+| `dist/megumin-ui-no-dark.css` | ❌ | ✅ |
+| `dist/megumin-ui-no-layout.css` | ✅ | ❌ |
+| `dist/megumin-ui-no-dark-no-layout.css` | ❌ | ❌ |
+
+LESS users can also import layout utilities on-demand:
+
+```less
+// Import only the layout utilities
+@import "megumin-ui/src/components/default/layout.less";
+```
+
 ## Components
 
 ### Layout
