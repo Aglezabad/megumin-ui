@@ -6,34 +6,34 @@ table {
   border-spacing: 0;
 
   thead {
-    background-color: darken(@base-color, 10%);
+    background-color: var(--mg-table-head-bg);
 
     tr th {
       padding: @table-cell-padding;
       text-align: left;
       font-weight: 700;
-      .contrast-color-for(darken(@base-color, 10%));
-      border-bottom: .2rem solid darken(@base-color, 20%);
+      color: var(--mg-table-head-fg);
+      border-bottom: .2rem solid var(--mg-table-head-border);
     }
   }
 
   tbody {
     tr {
       &:nth-child(even) {
-        background-color: darken(@base-color, 5%);
+        background-color: var(--mg-table-stripe-bg);
       }
 
       &:hover {
-        background-color: darken(@base-color, 8%);
+        background-color: var(--mg-table-row-hover);
       }
 
       &:nth-child(even):hover {
-        background-color: darken(@base-color, 13%);
+        background-color: var(--mg-table-stripe-hover);
       }
 
       td {
         padding: @table-cell-padding;
-        border-bottom: .1rem solid darken(@base-color, 10%);
+        border-bottom: .1rem solid var(--mg-table-cell-border);
       }
     }
   }
