@@ -13,6 +13,7 @@ A lightweight, dark-mode ready CSS framework focusing on simplicity and modern d
    - [Typography](#typography)
    - [Buttons](#buttons)
    - [Badges](#badges)
+   - [Alerts](#alerts)
    - [Footers](#footers)
 3. [Theming](#theming)
    - [Colors](#colors)
@@ -42,6 +43,24 @@ Add to your HTML:
 Or import in LESS:
 ```less
 @import "megumin-ui/src/main.less";
+```
+
+#### Opt-out variants
+
+If you do not need the layout utilities (flex/grid classes), use one of the smaller no-layout builds to reduce your CSS footprint:
+
+| File | Dark mode | Layout utilities |
+|------|-----------|------------------|
+| `dist/megumin-ui.css` | ✅ | ✅ |
+| `dist/megumin-ui-no-dark.css` | ❌ | ✅ |
+| `dist/megumin-ui-no-layout.css` | ✅ | ❌ |
+| `dist/megumin-ui-no-dark-no-layout.css` | ❌ | ❌ |
+
+LESS users can also import layout utilities on-demand:
+
+```less
+// Import only the layout utilities
+@import "megumin-ui/src/components/default/layout.less";
 ```
 
 ## Components
@@ -114,6 +133,53 @@ Inline status indicators and count labels:
 <span>New messages <span class="badge secondary">12</span></span>
 ```
 
+### Alerts
+
+Alert and banner components for surfacing feedback to the user. Alerts support the existing color palette (primary, secondary, tertiary) as well as semantic state variants (success, error, warning, info). An optional dismiss affordance can be included as a `button.dismiss` inside the alert.
+
+```html
+<!-- Default alert -->
+<div class="alert" role="alert">
+  <span>This is a default alert message.</span>
+</div>
+
+<!-- Palette color variants -->
+<div class="alert primary" role="alert">
+  <span>This is a primary (brand) alert.</span>
+</div>
+
+<div class="alert secondary" role="alert">
+  <span>This is a secondary alert.</span>
+</div>
+
+<div class="alert tertiary" role="alert">
+  <span>This is a tertiary alert.</span>
+</div>
+
+<!-- Semantic state variants -->
+<div class="alert success" role="alert">
+  <span>Operation completed successfully.</span>
+</div>
+
+<div class="alert error" role="alert">
+  <span>An error occurred. Please try again.</span>
+</div>
+
+<div class="alert warning" role="alert">
+  <span>Warning: this action cannot be undone.</span>
+</div>
+
+<div class="alert info" role="alert">
+  <span>Here is some helpful information.</span>
+</div>
+
+<!-- With optional dismiss button -->
+<div class="alert success" role="alert">
+  <span>Your changes have been saved.</span>
+  <button class="dismiss" aria-label="Dismiss" onclick="this.closest('.alert').remove()">&#x2715;</button>
+</div>
+```
+
 ### Footers
 
 Flexible footer components:
@@ -152,6 +218,12 @@ Customize your theme:
 @secondary-color-dark: #4a90e2;
 @tertiary-color-dark: #50e3c2;
 @base-color-dark: #1a1a1a;
+
+// Alert semantic state colors
+@alert-success-color: #1e6b45;
+@alert-error-color: #8a1a00;
+@alert-warning-color: #8a6200;
+@alert-info-color: #1a3d6e;
 ```
 
 ### Dark Mode
