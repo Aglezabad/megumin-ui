@@ -22,6 +22,9 @@
   --mg-btn-bg: #dfdfdf;
   --mg-btn-fg: #0a0a0a;
   --mg-btn-overlay: rgba(10, 10, 10, 0.25);
+  --mg-btn-focus: #8a0000;
+  --mg-secondary-focus: #b08100;
+  --mg-tertiary-focus: #563636;
   --mg-badge-bg: #dfdfdf;
   --mg-badge-fg: #0a0a0a;
   --mg-link: #b08100;
@@ -809,6 +812,10 @@ button::after {
 button:hover::after {
   opacity: 1;
 }
+button:focus-visible {
+  outline: 2px solid var(--mg-btn-focus);
+  outline-offset: 2px;
+}
 button.small {
   padding: 0.25rem;
   min-height: 2rem;
@@ -845,12 +852,18 @@ button.secondary {
 button.secondary::after {
   background-color: var(--mg-secondary-overlay);
 }
+button.secondary:focus-visible {
+  outline-color: var(--mg-secondary-focus);
+}
 button.tertiary {
   background-color: var(--mg-tertiary-bg);
   color: var(--mg-tertiary-fg);
 }
 button.tertiary::after {
   background-color: var(--mg-tertiary-overlay);
+}
+button.tertiary:focus-visible {
+  outline-color: var(--mg-tertiary-focus);
 }
 @media (max-width: 768px) {
   button {
@@ -1342,6 +1355,9 @@ table tbody tr td {
     --mg-btn-bg: #242424;
     --mg-btn-fg: #f8f8f8;
     --mg-btn-overlay: rgba(248, 248, 248, 0.25);
+    --mg-btn-focus: #ff2424;
+    --mg-secondary-focus: #ffcf4a;
+    --mg-tertiary-focus: #ab7a7a;
     --mg-badge-bg: #242424;
     --mg-badge-fg: #f8f8f8;
     --mg-link: #976e00;

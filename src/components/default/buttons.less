@@ -36,6 +36,11 @@ button {
     opacity: 1;
   }
 
+  &:focus-visible {
+    outline: 2px solid var(--mg-btn-focus);
+    outline-offset: 2px;
+  }
+
   // Button sizes
   &.small {
     padding: @button-padding * 0.5;
@@ -80,6 +85,9 @@ button {
     &::after {
       background-color: var(--mg-secondary-overlay);
     }
+    &:focus-visible {
+      outline-color: var(--mg-secondary-focus);
+    }
   }
 
   &.tertiary {
@@ -87,6 +95,9 @@ button {
     color: var(--mg-tertiary-fg);
     &::after {
       background-color: var(--mg-tertiary-overlay);
+    }
+    &:focus-visible {
+      outline-color: var(--mg-tertiary-focus);
     }
   }
 
