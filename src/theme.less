@@ -39,5 +39,112 @@
 @button-min-width: 2.5rem;
 @button-font-size: 1rem;
 
+// ---- BADGES ----
+@badge-padding: .25rem .5rem;
+@badge-border-radius: @button-border-radius;
+@badge-font-size: 0.75rem;
+
+// ---- FORMS ----
+@form-padding: .375rem .75rem;
+@form-border-radius: .25rem;
+@form-border-width: .125rem;
+@form-font-size: 1rem;
+@form-transition: .2s;
+@form-min-height: 2.5rem;
+@form-textarea-min-height: 6rem;
+@form-checkbox-size: 1.25rem;
+
+// ---- TABLES ----
+@table-cell-padding: .75rem;
+
+// ---- ALERTS ----
+@alert-padding: .75rem 1rem;
+@alert-border-radius: .25rem;
+
 // ---- LAYOUT ----
 @grid-gap: 1rem;
+
+// ---- CSS CUSTOM PROPERTIES (light mode defaults) ----
+:root {
+  // Base
+  --mg-base-bg: @base-color;
+  --mg-base-fg: contrast(@base-color, @night-black, @seasalt-white);
+  --mg-base-overlay: fade(contrast(@base-color, @night-black, @seasalt-white), 25%);
+  --mg-base-header-border: darken(@base-color, 10%);
+  --mg-base-footer-border: darken(@base-color, 20%);
+
+  // Primary
+  --mg-primary-bg: @primary-color;
+  --mg-primary-fg: contrast(@primary-color, @night-black, @seasalt-white);
+  --mg-primary-overlay: fade(contrast(@primary-color, @night-black, @seasalt-white), 25%);
+  --mg-primary-header-border: darken(@primary-color, 10%);
+  --mg-primary-footer-border: darken(@primary-color, 20%);
+
+  // Secondary
+  --mg-secondary-bg: @secondary-color;
+  --mg-secondary-fg: contrast(@secondary-color, @night-black, @seasalt-white);
+  --mg-secondary-overlay: fade(contrast(@secondary-color, @night-black, @seasalt-white), 25%);
+  --mg-secondary-header-border: darken(@secondary-color, 10%);
+  --mg-secondary-footer-border: darken(@secondary-color, 20%);
+
+  // Tertiary
+  --mg-tertiary-bg: @tertiary-color;
+  --mg-tertiary-fg: contrast(@tertiary-color, @night-black, @seasalt-white);
+  --mg-tertiary-overlay: fade(contrast(@tertiary-color, @night-black, @seasalt-white), 25%);
+  --mg-tertiary-header-border: darken(@tertiary-color, 10%);
+  --mg-tertiary-footer-border: darken(@tertiary-color, 20%);
+
+  // Button base
+  --mg-btn-bg: @button-base-color;
+  --mg-btn-fg: contrast(@button-base-color, @night-black, @seasalt-white);
+  --mg-btn-overlay: fade(contrast(@button-base-color, @night-black, @seasalt-white), 25%);
+
+  // Badge base
+  --mg-badge-bg: @button-base-color;
+  --mg-badge-fg: contrast(@button-base-color, @night-black, @seasalt-white);
+
+  // Link
+  --mg-link: @link-color;
+
+  // Table
+  --mg-table-head-bg: darken(@base-color, 10%);
+  --mg-table-head-fg: contrast(darken(@base-color, 10%), @night-black, @seasalt-white);
+  --mg-table-head-border: darken(@base-color, 20%);
+  --mg-table-stripe-bg: darken(@base-color, 5%);
+  --mg-table-row-hover: darken(@base-color, 8%);
+  --mg-table-stripe-hover: darken(@base-color, 13%);
+  --mg-table-cell-border: darken(@base-color, 10%);
+
+  // Form
+  --mg-form-bg: @base-color;
+  --mg-form-fg: contrast(@base-color, @night-black, @seasalt-white);
+  --mg-form-border: darken(@base-color, 20%);
+  --mg-form-border-hover: darken(@base-color, 30%);
+  --mg-form-focus: darken(@base-color, 40%);
+  --mg-form-focus-ring: fade(darken(@base-color, 40%), 25%);
+
+  // Alert base
+  --mg-alert-bg: @button-base-color;
+  --mg-alert-fg: contrast(@button-base-color, @night-black, @seasalt-white);
+  --mg-alert-border: darken(@button-base-color, 20%);
+
+  // Alert success
+  --mg-alert-success-bg: @alert-green;
+  --mg-alert-success-fg: contrast(@alert-green, @night-black, @seasalt-white);
+  --mg-alert-success-border: darken(@alert-green, 15%);
+
+  // Alert error
+  --mg-alert-error-bg: @alert-red;
+  --mg-alert-error-fg: contrast(@alert-red, @night-black, @seasalt-white);
+  --mg-alert-error-border: darken(@alert-red, 15%);
+
+  // Alert warning
+  --mg-alert-warning-bg: @alert-amber;
+  --mg-alert-warning-fg: contrast(@alert-amber, @night-black, @seasalt-white);
+  --mg-alert-warning-border: darken(@alert-amber, 15%);
+
+  // Alert info
+  --mg-alert-info-bg: @alert-blue;
+  --mg-alert-info-fg: contrast(@alert-blue, @night-black, @seasalt-white);
+  --mg-alert-info-border: darken(@alert-blue, 15%);
+}
