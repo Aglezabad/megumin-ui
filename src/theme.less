@@ -52,6 +52,10 @@
 // ---- TABLES ----
 @table-cell-padding: .75rem;
 
+// ---- ALERTS ----
+@alert-padding: .75rem 1rem;
+@alert-border-radius: .25rem;
+
 // ---- LAYOUT ----
 @grid-gap: 1rem;
 
@@ -109,4 +113,29 @@
   --mg-form-border-hover: darken(@base-color, 30%);
   --mg-form-focus: darken(@base-color, 40%);
   --mg-form-focus-ring: fade(darken(@base-color, 40%), 25%);
+
+  // Alert base
+  --mg-alert-bg: @button-base-color;
+  --mg-alert-fg: contrast(@button-base-color, @night-black, @seasalt-white);
+  --mg-alert-border: darken(@button-base-color, 20%);
+
+  // Alert success
+  --mg-alert-success-bg: @alert-green;
+  --mg-alert-success-fg: contrast(@alert-green, @night-black, @seasalt-white);
+  --mg-alert-success-border: darken(@alert-green, 15%);
+
+  // Alert error
+  --mg-alert-error-bg: @alert-red;
+  --mg-alert-error-fg: contrast(@alert-red, @night-black, @seasalt-white);
+  --mg-alert-error-border: darken(@alert-red, 15%);
+
+  // Alert warning
+  --mg-alert-warning-bg: @alert-amber;
+  --mg-alert-warning-fg: contrast(@alert-amber, @night-black, @seasalt-white);
+  --mg-alert-warning-border: darken(@alert-amber, 15%);
+
+  // Alert info
+  --mg-alert-info-bg: @alert-blue;
+  --mg-alert-info-fg: contrast(@alert-blue, @night-black, @seasalt-white);
+  --mg-alert-info-border: darken(@alert-blue, 15%);
 }

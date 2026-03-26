@@ -36,6 +36,21 @@
   --mg-form-border-hover: #acacac;
   --mg-form-focus: #929292;
   --mg-form-focus-ring: rgba(146, 146, 146, 0.25);
+  --mg-alert-bg: #dfdfdf;
+  --mg-alert-fg: #0a0a0a;
+  --mg-alert-border: #acacac;
+  --mg-alert-success-bg: #1e6b45;
+  --mg-alert-success-fg: #f8f8f8;
+  --mg-alert-success-border: #0d2f1e;
+  --mg-alert-error-bg: #8a1a00;
+  --mg-alert-error-fg: #f8f8f8;
+  --mg-alert-error-border: #3d0c00;
+  --mg-alert-warning-bg: #8a6200;
+  --mg-alert-warning-fg: #f8f8f8;
+  --mg-alert-warning-border: #3d2c00;
+  --mg-alert-info-bg: #1a3d6e;
+  --mg-alert-info-fg: #f8f8f8;
+  --mg-alert-info-border: #0b1b30;
 }
 @font-face {
   font-family: 'lansui';
@@ -589,6 +604,9 @@ input[type="radio"]:checked::after {
   height: 100%;
   object-fit: contain;
 }
+.header > a {
+  color: var(--mg-base-fg);
+}
 .header nav.centered {
   flex: 1;
   display: flex;
@@ -623,6 +641,9 @@ input[type="radio"]:checked::after {
 .header.primary .brand-link {
   color: var(--mg-primary-fg);
 }
+.header.primary > a {
+  color: var(--mg-primary-fg);
+}
 .header.primary nav a {
   color: var(--mg-primary-fg);
 }
@@ -633,6 +654,9 @@ input[type="radio"]:checked::after {
 .header.secondary .brand-link {
   color: var(--mg-secondary-fg);
 }
+.header.secondary > a {
+  color: var(--mg-secondary-fg);
+}
 .header.secondary nav a {
   color: var(--mg-secondary-fg);
 }
@@ -641,6 +665,9 @@ input[type="radio"]:checked::after {
   background-color: var(--mg-secondary-overlay);
 }
 .header.tertiary .brand-link {
+  color: var(--mg-tertiary-fg);
+}
+.header.tertiary > a {
   color: var(--mg-tertiary-fg);
 }
 .header.tertiary nav a {
@@ -718,6 +745,69 @@ table tbody tr td {
   width: 100%;
   -webkit-overflow-scrolling: touch;
 }
+.alert {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  border-left: 0.3rem solid var(--mg-alert-border);
+  background-color: var(--mg-alert-bg);
+  color: var(--mg-alert-fg);
+}
+.alert button.dismiss {
+  flex-shrink: 0;
+  min-height: auto;
+  min-width: auto;
+  padding: 0 0.25rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  background-color: transparent;
+  color: inherit;
+  opacity: 0.6;
+}
+.alert button.dismiss::after {
+  background-color: currentColor;
+}
+.alert button.dismiss:hover {
+  opacity: 1;
+}
+.alert.primary {
+  background-color: var(--mg-primary-bg);
+  color: var(--mg-primary-fg);
+  border-left-color: var(--mg-primary-header-border);
+}
+.alert.secondary {
+  background-color: var(--mg-secondary-bg);
+  color: var(--mg-secondary-fg);
+  border-left-color: var(--mg-secondary-header-border);
+}
+.alert.tertiary {
+  background-color: var(--mg-tertiary-bg);
+  color: var(--mg-tertiary-fg);
+  border-left-color: var(--mg-tertiary-header-border);
+}
+.alert.success {
+  background-color: var(--mg-alert-success-bg);
+  color: var(--mg-alert-success-fg);
+  border-left-color: var(--mg-alert-success-border);
+}
+.alert.error {
+  background-color: var(--mg-alert-error-bg);
+  color: var(--mg-alert-error-fg);
+  border-left-color: var(--mg-alert-error-border);
+}
+.alert.warning {
+  background-color: var(--mg-alert-warning-bg);
+  color: var(--mg-alert-warning-fg);
+  border-left-color: var(--mg-alert-warning-border);
+}
+.alert.info {
+  background-color: var(--mg-alert-info-bg);
+  color: var(--mg-alert-info-fg);
+  border-left-color: var(--mg-alert-info-border);
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --mg-base-bg: #0a0a0a;
@@ -757,5 +847,20 @@ table tbody tr td {
     --mg-form-border-hover: #575757;
     --mg-form-focus: #707070;
     --mg-form-focus-ring: rgba(112, 112, 112, 0.25);
+    --mg-alert-bg: #242424;
+    --mg-alert-fg: #f8f8f8;
+    --mg-alert-border: #707070;
+    --mg-alert-success-bg: #247f52;
+    --mg-alert-success-fg: #f8f8f8;
+    --mg-alert-success-border: #34bb78;
+    --mg-alert-error-bg: #a31f00;
+    --mg-alert-error-fg: #f8f8f8;
+    --mg-alert-error-border: #f02d00;
+    --mg-alert-warning-bg: #a37400;
+    --mg-alert-warning-fg: #f8f8f8;
+    --mg-alert-warning-border: #f0aa00;
+    --mg-alert-info-bg: #1f4883;
+    --mg-alert-info-fg: #f8f8f8;
+    --mg-alert-info-border: #2e6bc1;
   }
 }
