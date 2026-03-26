@@ -39,6 +39,16 @@
 @button-min-width: 2.5rem;
 @button-font-size: 1rem;
 
+// ---- FORMS ----
+@form-padding: .375rem .75rem;
+@form-border-radius: .25rem;
+@form-border-width: .125rem;
+@form-font-size: 1rem;
+@form-transition: .2s;
+@form-min-height: 2.5rem;
+@form-textarea-min-height: 6rem;
+@form-checkbox-size: 1.25rem;
+
 // ---- TABLES ----
 @table-cell-padding: .75rem;
 
@@ -91,4 +101,12 @@
   --mg-table-row-hover: darken(@base-color, 8%);
   --mg-table-stripe-hover: darken(@base-color, 13%);
   --mg-table-cell-border: darken(@base-color, 10%);
+
+  // Form
+  --mg-form-bg: @base-color;
+  --mg-form-fg: contrast(@base-color, @night-black, @seasalt-white);
+  --mg-form-border: darken(@base-color, 20%);
+  --mg-form-border-hover: darken(@base-color, 30%);
+  --mg-form-focus: darken(@base-color, 40%);
+  --mg-form-focus-ring: fade(darken(@base-color, 40%), 25%);
 }
