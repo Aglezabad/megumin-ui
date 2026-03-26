@@ -23,6 +23,13 @@
   --mg-btn-fg: #0a0a0a;
   --mg-btn-overlay: rgba(10, 10, 10, 0.25);
   --mg-link: #b08100;
+  --mg-table-head-bg: #dfdfdf;
+  --mg-table-head-fg: #0a0a0a;
+  --mg-table-head-border: #c5c5c5;
+  --mg-table-stripe-bg: #ebebeb;
+  --mg-table-row-hover: #e4e4e4;
+  --mg-table-stripe-hover: #d7d7d7;
+  --mg-table-cell-border: #dfdfdf;
 }
 @font-face {
   font-family: 'lansui';
@@ -484,6 +491,39 @@ button.tertiary::after {
   position: sticky;
   bottom: 0;
 }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table thead {
+  background-color: var(--mg-table-head-bg);
+}
+table thead tr th {
+  padding: 0.75rem;
+  text-align: left;
+  font-weight: 700;
+  color: var(--mg-table-head-fg);
+  border-bottom: 0.2rem solid var(--mg-table-head-border);
+}
+table tbody tr:nth-child(even) {
+  background-color: var(--mg-table-stripe-bg);
+}
+table tbody tr:hover {
+  background-color: var(--mg-table-row-hover);
+}
+table tbody tr:nth-child(even):hover {
+  background-color: var(--mg-table-stripe-hover);
+}
+table tbody tr td {
+  padding: 0.75rem;
+  border-bottom: 0.1rem solid var(--mg-table-cell-border);
+}
+.table-responsive {
+  overflow-x: auto;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --mg-base-bg: #0a0a0a;
@@ -510,5 +550,12 @@ button.tertiary::after {
     --mg-btn-fg: #f8f8f8;
     --mg-btn-overlay: rgba(248, 248, 248, 0.25);
     --mg-link: #976e00;
+    --mg-table-head-bg: #242424;
+    --mg-table-head-fg: #f8f8f8;
+    --mg-table-head-border: #3d3d3d;
+    --mg-table-stripe-bg: #171717;
+    --mg-table-row-hover: #1e1e1e;
+    --mg-table-stripe-hover: #2b2b2b;
+    --mg-table-cell-border: #242424;
   }
 }

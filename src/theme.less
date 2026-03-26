@@ -39,6 +39,9 @@
 @button-min-width: 2.5rem;
 @button-font-size: 1rem;
 
+// ---- TABLES ----
+@table-cell-padding: .75rem;
+
 // ---- LAYOUT ----
 @grid-gap: 1rem;
 
@@ -79,4 +82,13 @@
 
   // Link
   --mg-link: @link-color;
+
+  // Table
+  --mg-table-head-bg: darken(@base-color, 10%);
+  --mg-table-head-fg: contrast(darken(@base-color, 10%), @night-black, @seasalt-white);
+  --mg-table-head-border: darken(@base-color, 20%);
+  --mg-table-stripe-bg: darken(@base-color, 5%);
+  --mg-table-row-hover: darken(@base-color, 8%);
+  --mg-table-stripe-hover: darken(@base-color, 13%);
+  --mg-table-cell-border: darken(@base-color, 10%);
 }
