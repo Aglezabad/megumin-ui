@@ -1,0 +1,27 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: inherit;
+  font-size: @badge-font-size;
+  font-weight: 700;
+  line-height: 1;
+  padding: @badge-padding;
+  border-radius: @badge-border-radius;
+  background-color: var(--mg-badge-bg);
+  color: var(--mg-badge-fg);
+
+  &.primary {
+    background-color: var(--mg-primary-bg);
+    color: var(--mg-primary-fg);
+  }
+
+  &.secondary {
+    background-color: var(--mg-secondary-bg);
+    color: var(--mg-secondary-fg);
+  }
+
+  &.tertiary {
+    background-color: var(--mg-tertiary-bg);
+    color: var(--mg-tertiary-fg);
+  }
+}

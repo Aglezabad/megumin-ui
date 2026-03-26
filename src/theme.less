@@ -39,6 +39,11 @@
 @button-min-width: 2.5rem;
 @button-font-size: 1rem;
 
+// ---- BADGES ----
+@badge-padding: .25rem .5rem;
+@badge-border-radius: @button-border-radius;
+@badge-font-size: 0.75rem;
+
 // ---- FORMS ----
 @form-padding: .375rem .75rem;
 @form-border-radius: .25rem;
@@ -93,6 +98,10 @@
   --mg-btn-bg: @button-base-color;
   --mg-btn-fg: contrast(@button-base-color, @night-black, @seasalt-white);
   --mg-btn-overlay: fade(contrast(@button-base-color, @night-black, @seasalt-white), 25%);
+
+  // Badge base
+  --mg-badge-bg: @button-base-color;
+  --mg-badge-fg: contrast(@button-base-color, @night-black, @seasalt-white);
 
   // Link
   --mg-link: @link-color;

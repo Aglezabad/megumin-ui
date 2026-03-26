@@ -22,6 +22,8 @@
   --mg-btn-bg: #dfdfdf;
   --mg-btn-fg: #0a0a0a;
   --mg-btn-overlay: rgba(10, 10, 10, 0.25);
+  --mg-badge-bg: #dfdfdf;
+  --mg-badge-fg: #0a0a0a;
   --mg-link: #b08100;
   --mg-table-head-bg: #dfdfdf;
   --mg-table-head-fg: #0a0a0a;
@@ -372,6 +374,30 @@ button.tertiary::after {
     min-height: 3rem;
     padding: 0.5rem 1.25rem;
   }
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  background-color: var(--mg-badge-bg);
+  color: var(--mg-badge-fg);
+}
+.badge.primary {
+  background-color: var(--mg-primary-bg);
+  color: var(--mg-primary-fg);
+}
+.badge.secondary {
+  background-color: var(--mg-secondary-bg);
+  color: var(--mg-secondary-fg);
+}
+.badge.tertiary {
+  background-color: var(--mg-tertiary-bg);
+  color: var(--mg-tertiary-fg);
 }
 input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="range"]):not([type="color"]):not([type="file"]),
 textarea,
