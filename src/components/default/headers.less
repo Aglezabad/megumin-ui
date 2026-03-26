@@ -57,6 +57,11 @@
     }
   }
 
+  // Direct child links (not inside nav or .brand-link)
+  > a {
+    color: var(--mg-base-fg);
+  }
+
   // Navigation
   nav {
     &.centered {
@@ -102,6 +107,10 @@
       color: var(--mg-primary-fg);
     }
 
+    > a {
+      color: var(--mg-primary-fg);
+    }
+
     nav a {
       color: var(--mg-primary-fg);
       &:hover, &.selected {
@@ -115,6 +124,10 @@
       color: var(--mg-secondary-fg);
     }
 
+    > a {
+      color: var(--mg-secondary-fg);
+    }
+
     nav a {
       color: var(--mg-secondary-fg);
       &:hover, &.selected {
@@ -125,6 +138,10 @@
 
   &.tertiary {
     .brand-link {
+      color: var(--mg-tertiary-fg);
+    }
+
+    > a {
       color: var(--mg-tertiary-fg);
     }
 
