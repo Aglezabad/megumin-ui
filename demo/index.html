@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Megumin UI — Component Demo</title>
+  <link rel="stylesheet" href="../dist/megumin-ui.css">
+  <style>
+    .demo-section {
+      margin: 2rem 0;
+      padding: 1.5rem;
+      border: 1px solid var(--mg-base-header-border);
+      border-radius: 0.5rem;
+    }
+
+    .demo-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .demo-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .demo-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+      opacity: 0.6;
+    }
+
+    .demo-grid-box {
+      padding: 1rem;
+      text-align: center;
+      background-color: var(--mg-primary-bg);
+      color: var(--mg-primary-fg);
+      border-radius: 0.25rem;
+    }
+  </style>
+</head>
+<body class="screen-size">
+
+  <!-- Header -->
+  <header class="header primary sticky">
+    <a class="brand-link" href="#">Megumin UI</a>
+    <nav>
+      <ul>
+        <li><a href="#typography" class="selected">Typography</a></li>
+        <li><a href="#buttons">Buttons</a></li>
+        <li><a href="#badges">Badges</a></li>
+        <li><a href="#alerts">Alerts</a></li>
+        <li><a href="#forms">Forms</a></li>
+        <li><a href="#tables">Tables</a></li>
+        <li><a href="#layout">Layout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <h1>Megumin UI — Component Demo</h1>
+    <p>A lightweight, dark-mode ready CSS framework focusing on simplicity and modern design.</p>
+
+    <!-- Typography -->
+    <section id="typography" class="demo-section">
+      <h2>Typography</h2>
+
+      <div class="demo-label">Headings</div>
+      <h1>Heading 1 (2.5rem)</h1>
+      <h2>Heading 2 (2rem)</h2>
+      <h3>Heading 3 (1.75rem)</h3>
+      <h4>Heading 4 (1.5rem)</h4>
+      <h5>Heading 5 (1.25rem)</h5>
+      <h6>Heading 6 (1rem)</h6>
+
+      <div class="demo-label">Link</div>
+      <p><a href="#">Default link style</a></p>
+
+      <div class="demo-label">Text utilities</div>
+      <div class="demo-row">
+        <span class="font-bold">font-bold</span>
+        <span class="font-normal">font-normal</span>
+        <span class="uppercase">uppercase</span>
+        <span class="truncate" style="max-width: 150px;">truncate: this text is too long to fit</span>
+      </div>
+      <div class="demo-row">
+        <div style="width: 100%;" class="text-left">text-left</div>
+        <div style="width: 100%;" class="text-center">text-center</div>
+        <div style="width: 100%;" class="text-right">text-right</div>
+      </div>
+    </section>
+
+    <!-- Buttons -->
+    <section id="buttons" class="demo-section">
+      <h2>Buttons</h2>
+
+      <div class="demo-label">Color variants</div>
+      <div class="demo-row">
+        <button>Default</button>
+        <button class="primary">Primary</button>
+        <button class="secondary">Secondary</button>
+        <button class="tertiary">Tertiary</button>
+      </div>
+
+      <div class="demo-label">Sizes</div>
+      <div class="demo-row">
+        <button class="primary small">Small</button>
+        <button class="primary">Default</button>
+        <button class="primary large">Large</button>
+        <button class="primary x-large">X-Large</button>
+      </div>
+
+      <div class="demo-label">Disabled state</div>
+      <div class="demo-row">
+        <button disabled>Default</button>
+        <button class="primary" disabled>Primary</button>
+        <button class="secondary" disabled>Secondary</button>
+        <button class="tertiary" disabled>Tertiary</button>
+      </div>
+    </section>
+
+    <!-- Badges -->
+    <section id="badges" class="demo-section">
+      <h2>Badges</h2>
+
+      <div class="demo-label">Color variants</div>
+      <div class="demo-row">
+        <span class="badge">Default</span>
+        <span class="badge primary">Primary</span>
+        <span class="badge secondary">Secondary</span>
+        <span class="badge tertiary">Tertiary</span>
+      </div>
+
+      <div class="demo-label">Inline usage</div>
+      <div class="demo-row">
+        <span>Pending tasks <span class="badge primary">3</span></span>
+        <span>New messages <span class="badge secondary">12</span></span>
+        <span>Notifications <span class="badge tertiary">99+</span></span>
+      </div>
+    </section>
+
+    <!-- Alerts -->
+    <section id="alerts" class="demo-section">
+      <h2>Alerts</h2>
+
+      <div class="demo-label">Palette variants</div>
+      <div class="alert mb-4" role="alert">
+        <span>This is a default alert message.</span>
+      </div>
+      <div class="alert primary mb-4" role="alert">
+        <span>This is a primary (brand) alert.</span>
+      </div>
+      <div class="alert secondary mb-4" role="alert">
+        <span>This is a secondary alert.</span>
+      </div>
+      <div class="alert tertiary mb-4" role="alert">
+        <span>This is a tertiary alert.</span>
+      </div>
+
+      <div class="demo-label">Semantic state variants</div>
+      <div class="alert success mb-4" role="alert">
+        <span>Operation completed successfully.</span>
+      </div>
+      <div class="alert error mb-4" role="alert">
+        <span>An error occurred. Please try again.</span>
+      </div>
+      <div class="alert warning mb-4" role="alert">
+        <span>Warning: this action cannot be undone.</span>
+      </div>
+      <div class="alert info mb-4" role="alert">
+        <span>Here is some helpful information.</span>
+      </div>
+
+      <div class="demo-label">With dismiss button</div>
+      <div class="alert success" role="alert">
+        <span>Your changes have been saved.</span>
+        <button class="dismiss" aria-label="Dismiss" onclick="this.closest('.alert').remove()">&#x2715;</button>
+      </div>
+    </section>
+
+    <!-- Forms -->
+    <section id="forms" class="demo-section">
+      <h2>Forms</h2>
+
+      <div class="demo-label">Text inputs</div>
+      <div class="grid cols-3 mb-4">
+        <input type="text" placeholder="Default input">
+        <input type="text" class="primary" placeholder="Primary input">
+        <input type="text" class="secondary" placeholder="Secondary input">
+      </div>
+      <div class="grid cols-2 mb-4">
+        <input type="text" class="tertiary" placeholder="Tertiary input">
+        <input type="text" placeholder="Disabled input" disabled>
+      </div>
+
+      <div class="demo-label">Other input types</div>
+      <div class="grid cols-3 mb-4">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <input type="number" placeholder="Number">
+      </div>
+
+      <div class="demo-label">Textarea</div>
+      <textarea class="mb-4" placeholder="Enter your message here…"></textarea>
+
+      <div class="demo-label">Select</div>
+      <div class="grid cols-3 mb-4">
+        <select>
+          <option value="">Default select</option>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+        </select>
+        <select class="primary">
+          <option value="">Primary select</option>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+        </select>
+        <select disabled>
+          <option value="">Disabled select</option>
+        </select>
+      </div>
+
+      <div class="demo-label">Checkboxes</div>
+      <div class="demo-row mb-4">
+        <label><input type="checkbox"> Default</label>
+        <label><input type="checkbox" checked> Checked</label>
+        <label><input type="checkbox" class="primary" checked> Primary</label>
+        <label><input type="checkbox" class="secondary" checked> Secondary</label>
+        <label><input type="checkbox" class="tertiary" checked> Tertiary</label>
+        <label><input type="checkbox" disabled> Disabled</label>
+      </div>
+
+      <div class="demo-label">Radio buttons</div>
+      <div class="demo-row">
+        <label><input type="radio" name="r1"> Option A</label>
+        <label><input type="radio" name="r1" checked> Option B</label>
+        <label><input type="radio" class="primary" name="r2" checked> Primary</label>
+        <label><input type="radio" class="secondary" name="r3" checked> Secondary</label>
+        <label><input type="radio" class="tertiary" name="r4" checked> Tertiary</label>
+        <label><input type="radio" disabled> Disabled</label>
+      </div>
+    </section>
+
+    <!-- Tables -->
+    <section id="tables" class="demo-section">
+      <h2>Tables</h2>
+
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Role</th>
+              <th>Status</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Megumin</td>
+              <td>Arch-wizard</td>
+              <td><span class="badge primary">Active</span></td>
+              <td>9800</td>
+            </tr>
+            <tr>
+              <td>Kazuma</td>
+              <td>Adventurer</td>
+              <td><span class="badge secondary">Active</span></td>
+              <td>4200</td>
+            </tr>
+            <tr>
+              <td>Aqua</td>
+              <td>Goddess</td>
+              <td><span class="badge tertiary">Idle</span></td>
+              <td>1100</td>
+            </tr>
+            <tr>
+              <td>Darkness</td>
+              <td>Crusader</td>
+              <td><span class="badge primary">Active</span></td>
+              <td>7600</td>
+            </tr>
+            <tr>
+              <td>Wiz</td>
+              <td>Lich</td>
+              <td><span class="badge">Default</span></td>
+              <td>8300</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Layout -->
+    <section id="layout" class="demo-section">
+      <h2>Layout</h2>
+
+      <div class="demo-label">Grid — cols-2</div>
+      <div class="grid cols-2 mb-4">
+        <div class="demo-grid-box">Col 1</div>
+        <div class="demo-grid-box">Col 2</div>
+      </div>
+
+      <div class="demo-label">Grid — cols-3</div>
+      <div class="grid cols-3 mb-4">
+        <div class="demo-grid-box">Col 1</div>
+        <div class="demo-grid-box">Col 2</div>
+        <div class="demo-grid-box">Col 3</div>
+      </div>
+
+      <div class="demo-label">Grid — cols-4</div>
+      <div class="grid cols-4 mb-4">
+        <div class="demo-grid-box">Col 1</div>
+        <div class="demo-grid-box">Col 2</div>
+        <div class="demo-grid-box">Col 3</div>
+        <div class="demo-grid-box">Col 4</div>
+      </div>
+
+      <div class="demo-label">Flex — justify-between</div>
+      <div class="flex justify-between mb-4" style="background-color: var(--mg-base-header-border); border-radius: 0.25rem; padding: 0.5rem;">
+        <div class="demo-grid-box">Start</div>
+        <div class="demo-grid-box">Center</div>
+        <div class="demo-grid-box">End</div>
+      </div>
+
+      <div class="demo-label">Background color utilities</div>
+      <div class="grid cols-3">
+        <div class="bg-primary p-4" style="border-radius: 0.25rem;">bg-primary</div>
+        <div class="bg-secondary p-4" style="border-radius: 0.25rem;">bg-secondary</div>
+        <div class="bg-tertiary p-4" style="border-radius: 0.25rem;">bg-tertiary</div>
+      </div>
+    </section>
+
+    <!-- Headers showcase -->
+    <section id="headers" class="demo-section">
+      <h2>Headers</h2>
+
+      <div class="demo-label">Default header</div>
+      <div style="margin-bottom: 1rem;">
+        <header class="header">
+          <a class="brand-link" href="#">Brand</a>
+          <nav>
+            <ul>
+              <li><a href="#" class="selected">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+
+      <div class="demo-label">Primary header</div>
+      <div style="margin-bottom: 1rem;">
+        <header class="header primary">
+          <a class="brand-link" href="#">Brand</a>
+          <nav>
+            <ul>
+              <li><a href="#" class="selected">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+
+      <div class="demo-label">Secondary header</div>
+      <div style="margin-bottom: 1rem;">
+        <header class="header secondary">
+          <a class="brand-link" href="#">Brand</a>
+          <nav>
+            <ul>
+              <li><a href="#" class="selected">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+
+      <div class="demo-label">Tertiary header</div>
+      <header class="header tertiary">
+        <a class="brand-link" href="#">Brand</a>
+        <nav>
+          <ul>
+            <li><a href="#" class="selected">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+    </section>
+
+    <!-- Footers showcase -->
+    <section id="footers" class="demo-section">
+      <h2>Footers</h2>
+
+      <div class="demo-label">Default footer</div>
+      <div style="margin-bottom: 1rem;">
+        <footer class="footer">
+          <span>© 2025 Megumin UI</span>
+          <span>MIT License</span>
+        </footer>
+      </div>
+
+      <div class="demo-label">Primary footer</div>
+      <div style="margin-bottom: 1rem;">
+        <footer class="footer primary">
+          <span>© 2025 Megumin UI</span>
+          <span>MIT License</span>
+        </footer>
+      </div>
+
+      <div class="demo-label">Secondary footer</div>
+      <div style="margin-bottom: 1rem;">
+        <footer class="footer secondary">
+          <span>© 2025 Megumin UI</span>
+          <span>MIT License</span>
+        </footer>
+      </div>
+
+      <div class="demo-label">Tertiary footer</div>
+      <footer class="footer tertiary">
+        <span>© 2025 Megumin UI</span>
+        <span>MIT License</span>
+      </footer>
+    </section>
+
+  </div><!-- /.container -->
+
+  <!-- Page footer -->
+  <footer class="footer primary">
+    <div class="container flex justify-between items-center" style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 0.5rem;">
+      <span>Megumin UI</span>
+      <span>Component Demo</span>
+    </div>
+  </footer>
+
+</body>
+</html>
