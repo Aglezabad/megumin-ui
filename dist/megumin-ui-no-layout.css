@@ -59,10 +59,10 @@
 }
 @font-face {
   font-family: 'lansui';
-  src: local('lansui'), url('./lansui/Iansui-Regular-latin.woff2') format('woff2');
+  src: local('Iansui'), url('./lansui/Iansui-Regular-latin.woff2') format('woff2');
 }
 html {
-  font-family: 'lansui', system-ui, sans-serif;
+  font-family: 'lansui', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Liberation Sans', sans-serif;
 }
 html {
   height: 100%;
