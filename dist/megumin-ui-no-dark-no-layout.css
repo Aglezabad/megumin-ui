@@ -27,6 +27,14 @@
   --mg-tertiary-focus: #563636;
   --mg-badge-bg: #dfdfdf;
   --mg-badge-fg: #0a0a0a;
+  --mg-badge-success-bg: #1e6b45;
+  --mg-badge-success-fg: #f8f8f8;
+  --mg-badge-error-bg: #8a1a00;
+  --mg-badge-error-fg: #f8f8f8;
+  --mg-badge-warning-bg: #8a6200;
+  --mg-badge-warning-fg: #f8f8f8;
+  --mg-badge-info-bg: #1a3d6e;
+  --mg-badge-info-fg: #f8f8f8;
   --mg-link: #b08100;
   --mg-table-head-bg: #dfdfdf;
   --mg-table-head-fg: #0a0a0a;
@@ -78,9 +86,6 @@ body.screen-size {
 body .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0.5rem;
-}
-body .container div {
   padding: 0.5rem;
 }
 h1,
@@ -632,13 +637,71 @@ a {
 .font-bold {
   font-weight: bold;
 }
+.font-semibold {
+  font-weight: 600;
+}
+.font-medium {
+  font-weight: 500;
+}
 .font-normal {
   font-weight: normal;
+}
+.italic {
+  font-style: italic;
 }
 .uppercase {
   text-transform: uppercase;
 }
-button {
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+.text-muted {
+  opacity: 0.6;
+}
+.text-success {
+  color: var(--mg-badge-success-bg);
+}
+.text-danger {
+  color: var(--mg-badge-error-bg);
+}
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+button,
+a.btn {
   position: relative;
   border: none;
   outline: none;
@@ -655,7 +718,8 @@ button {
   background-color: var(--mg-btn-bg);
   color: var(--mg-btn-fg);
 }
-button::after {
+button::after,
+a.btn::after {
   position: absolute;
   content: '';
   top: 0;
@@ -667,67 +731,93 @@ button::after {
   opacity: 0;
   transition: opacity 0.2s;
 }
-button:hover::after {
+button:hover::after,
+a.btn:hover::after {
   opacity: 1;
 }
-button:focus-visible {
+button:focus-visible,
+a.btn:focus-visible {
   outline: 2px solid var(--mg-btn-focus);
   outline-offset: 2px;
 }
-button.small {
+button.small,
+a.btn.small {
   padding: 0.25rem;
   min-height: 2rem;
   font-size: 0.875rem;
 }
-button.large {
+button.large,
+a.btn.large {
   padding: 0.75rem;
   min-height: 3rem;
   font-size: 1.125rem;
 }
-button.x-large {
+button.x-large,
+a.btn.x-large {
   padding: 1rem;
   min-height: 3.5rem;
   font-size: 1.25rem;
 }
-button:disabled {
+button:disabled,
+a.btn:disabled,
+button[aria-disabled="true"],
+a.btn[aria-disabled="true"] {
   opacity: 0.6;
   cursor: not-allowed;
 }
-button:disabled::after {
+button:disabled::after,
+a.btn:disabled::after,
+button[aria-disabled="true"]::after,
+a.btn[aria-disabled="true"]::after {
   display: none;
 }
-button.primary {
+button.primary,
+a.btn.primary {
   background-color: var(--mg-primary-bg);
   color: var(--mg-primary-fg);
 }
-button.primary::after {
+button.primary::after,
+a.btn.primary::after {
   background-color: var(--mg-primary-overlay);
 }
-button.secondary {
+button.secondary,
+a.btn.secondary {
   background-color: var(--mg-secondary-bg);
   color: var(--mg-secondary-fg);
 }
-button.secondary::after {
+button.secondary::after,
+a.btn.secondary::after {
   background-color: var(--mg-secondary-overlay);
 }
-button.secondary:focus-visible {
+button.secondary:focus-visible,
+a.btn.secondary:focus-visible {
   outline-color: var(--mg-secondary-focus);
 }
-button.tertiary {
+button.tertiary,
+a.btn.tertiary {
   background-color: var(--mg-tertiary-bg);
   color: var(--mg-tertiary-fg);
 }
-button.tertiary::after {
+button.tertiary::after,
+a.btn.tertiary::after {
   background-color: var(--mg-tertiary-overlay);
 }
-button.tertiary:focus-visible {
+button.tertiary:focus-visible,
+a.btn.tertiary:focus-visible {
   outline-color: var(--mg-tertiary-focus);
 }
 @media (max-width: 768px) {
-  button {
+  button,
+  a.btn {
     min-height: 3rem;
     padding: 0.5rem 1.25rem;
   }
+}
+a.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 .badge {
   display: inline-flex;
@@ -749,9 +839,21 @@ button.tertiary:focus-visible {
   background-color: var(--mg-secondary-bg);
   color: var(--mg-secondary-fg);
 }
-.badge.tertiary {
-  background-color: var(--mg-tertiary-bg);
-  color: var(--mg-tertiary-fg);
+.badge.success {
+  background-color: var(--mg-badge-success-bg);
+  color: var(--mg-badge-success-fg);
+}
+.badge.warning {
+  background-color: var(--mg-badge-warning-bg);
+  color: var(--mg-badge-warning-fg);
+}
+.badge.error {
+  background-color: var(--mg-badge-error-bg);
+  color: var(--mg-badge-error-fg);
+}
+.badge.info {
+  background-color: var(--mg-badge-info-bg);
+  color: var(--mg-badge-info-fg);
 }
 input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="range"]):not([type="color"]):not([type="file"]),
 textarea,

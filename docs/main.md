@@ -15,11 +15,15 @@ A lightweight, dark-mode ready CSS framework focusing on simplicity and modern d
    - [Badges](#badges)
    - [Alerts](#alerts)
    - [Footers](#footers)
-3. [Theming](#theming)
+3. [Utilities](#utilities)
+   - [Text Utilities](#text-utilities)
+   - [Layout Utilities](#layout-utilities)
+   - [Spacing Utilities](#spacing-utilities)
+4. [Theming](#theming)
    - [Colors](#colors)
    - [Dark Mode](#dark-mode)
-4. [Browser Support](#browser-support)
-5. [Migration Guide](#migration-guide)
+5. [Browser Support](#browser-support)
+6. [Migration Guide](#migration-guide)
 
 ## Getting Started
 
@@ -99,7 +103,7 @@ Built-in typography with responsive sizing:
 
 ### Buttons
 
-Various button styles and sizes:
+Various button styles and sizes. The same color variant classes work on both `<button>` elements and `<a>` elements with the `.btn` class.
 
 ```html
 <!-- Colors -->
@@ -108,6 +112,11 @@ Various button styles and sizes:
 <button class="secondary">Secondary</button>
 <button class="tertiary">Tertiary</button>
 
+<!-- Anchor elements styled as buttons -->
+<a href="/signup" class="btn primary">Sign Up</a>
+<a href="/learn-more" class="btn secondary">Learn More</a>
+<a href="/docs" class="btn tertiary">Documentation</a>
+
 <!-- Sizes -->
 <button class="small">Small Button</button>
 <button class="large">Large Button</button>
@@ -115,22 +124,31 @@ Various button styles and sizes:
 
 <!-- States -->
 <button disabled>Disabled Button</button>
+<!-- For anchor elements, use aria-disabled -->
+<a class="btn primary" aria-disabled="true">Disabled Link Button</a>
 ```
 
 ### Badges
 
-Inline status indicators and count labels:
+Inline status indicators and count labels. Badges support both palette variants and semantic state variants.
 
 ```html
-<!-- Colors -->
+<!-- Palette variants -->
 <span class="badge">Default</span>
 <span class="badge primary">Primary</span>
 <span class="badge secondary">Secondary</span>
 <span class="badge tertiary">Tertiary</span>
 
+<!-- Semantic state variants -->
+<span class="badge success">Active</span>
+<span class="badge warning">Pending</span>
+<span class="badge error">Failed</span>
+<span class="badge info">Draft</span>
+
 <!-- Usage examples -->
-<span>Pending tasks <span class="badge primary">3</span></span>
-<span>New messages <span class="badge secondary">12</span></span>
+<span>Pending tasks <span class="badge warning">3</span></span>
+<span>New messages <span class="badge primary">12</span></span>
+<span>System status <span class="badge success">Online</span></span>
 ```
 
 ### Alerts
@@ -199,6 +217,98 @@ Flexible footer components:
 <footer class="footer primary">Primary Footer</footer>
 ```
 
+## Utilities
+
+### Text Utilities
+
+```html
+<!-- Text alignment -->
+<p class="text-left">Left aligned</p>
+<p class="text-center">Centered</p>
+<p class="text-right">Right aligned</p>
+
+<!-- Text sizes -->
+<p class="text-xs">Extra small (0.75rem)</p>
+<p class="text-sm">Small (0.875rem)</p>
+<!-- default body text -->
+<p class="text-lg">Large (1.125rem)</p>
+<p class="text-xl">Extra large (1.25rem)</p>
+<p class="text-2xl">2x large (1.5rem)</p>
+<p class="text-3xl">3x large (1.875rem)</p>
+
+<!-- Font weight -->
+<p class="font-bold">Bold</p>
+<p class="font-semibold">Semibold</p>
+<p class="font-medium">Medium</p>
+<p class="font-normal">Normal</p>
+
+<!-- Font style -->
+<p class="italic">Italic text</p>
+
+<!-- Text transform -->
+<p class="uppercase">Uppercase text</p>
+
+<!-- Text overflow -->
+<p class="truncate">Long text that will be truncated with an ellipsis...</p>
+<p class="whitespace-nowrap">Text that will not wrap</p>
+
+<!-- Line clamp -->
+<p class="line-clamp-1">Text clamped to one line...</p>
+<p class="line-clamp-3">Text clamped to three lines...</p>
+
+<!-- Text colors -->
+<p class="text-muted">Muted / secondary text</p>
+<p class="text-success">Success state text</p>
+<p class="text-danger">Danger / error state text</p>
+```
+
+### Layout Utilities
+
+```html
+<!-- Overflow -->
+<div class="overflow-hidden">Content with hidden overflow</div>
+<div class="overflow-x-auto">Horizontally scrollable content</div>
+
+<!-- Flex helpers (standalone) -->
+<div style="display:flex">
+  <div class="flex-1">Grows to fill available space</div>
+  <div class="flex-shrink-0">Does not shrink</div>
+</div>
+
+<!-- Sizing -->
+<div class="w-full">Full width element</div>
+
+<!-- Cursor -->
+<span class="cursor-pointer">Clickable element</span>
+
+<!-- Resize -->
+<textarea class="resize-none">Non-resizable textarea</textarea>
+
+<!-- Position -->
+<div class="relative">Relatively positioned element</div>
+```
+
+### Spacing Utilities
+
+Generated spacing scale: `0`, `1` (0.25rem), `2` (0.5rem), `3` (0.75rem), `4` (1rem), `5` (1.25rem), `6` (1.5rem), `8` (2rem), `10` (2.5rem), `12` (3rem).
+
+```html
+<!-- Margin -->
+<div class="m-4">Margin 1rem all sides</div>
+<div class="mt-2">Margin top 0.5rem</div>
+<div class="mb-2">Margin bottom 0.5rem</div>
+<div class="ml-4">Margin left 1rem</div>
+<div class="mr-4">Margin right 1rem</div>
+<div class="mx-auto">Horizontal auto margin (centering)</div>
+<div class="ml-auto">Push element to the right</div>
+<div class="mt-auto">Push element to the bottom (in flex column)</div>
+
+<!-- Padding -->
+<div class="p-4">Padding 1rem all sides</div>
+<div class="pt-2">Padding top 0.5rem</div>
+<div class="px-6">Horizontal padding 1.5rem</div>
+```
+
 ## Theming
 
 ### Colors
@@ -219,11 +329,11 @@ Customize your theme:
 @tertiary-color-dark: #50e3c2;
 @base-color-dark: #1a1a1a;
 
-// Alert semantic state colors
-@alert-success-color: #1e6b45;
-@alert-error-color: #8a1a00;
-@alert-warning-color: #8a6200;
-@alert-info-color: #1a3d6e;
+// Alert / badge semantic state colors
+@alert-green: #1e6b45;
+@alert-red:   #8a1a00;
+@alert-amber: #8a6200;
+@alert-blue:  #1a3d6e;
 ```
 
 ### Dark Mode
@@ -269,26 +379,12 @@ Dark mode activates automatically based on system preferences:
 4. Use provided mixins for consistency
 
 ```html
-<!-- Good -->
+<!-- Good: native button element -->
 <button class="primary">Submit</button>
 
-<!-- Avoid -->
+<!-- Good: anchor styled as button using .btn -->
+<a href="/action" class="btn primary">Go</a>
+
+<!-- Avoid: non-semantic div styled as button -->
 <div class="button primary">Submit</div>
-```
-
-### Utility Classes
-
-Common utility classes:
-
-```html
-<!-- Spacing -->
-<div class="m-1">Margin 1rem</div>
-<div class="p-2">Padding 2rem</div>
-
-<!-- Display -->
-<div class="hidden">Hidden content</div>
-<div class="flex">Flex container</div>
-
-<!-- Text -->
-<div class="text-center">Centered text</div>
 ```

@@ -12,7 +12,43 @@
 
 // Font Weight
 .font-bold { font-weight: bold; }
+.font-semibold { font-weight: 600; }
+.font-medium { font-weight: 500; }
 .font-normal { font-weight: normal; }
+
+// Font Style
+.italic { font-style: italic; }
 
 // Text Transform
 .uppercase { text-transform: uppercase; }
+
+// Text Sizes
+.text-xs  { font-size: 0.75rem;  line-height: 1rem; }
+.text-sm  { font-size: 0.875rem; line-height: 1.25rem; }
+.text-lg  { font-size: 1.125rem; line-height: 1.75rem; }
+.text-xl  { font-size: 1.25rem;  line-height: 1.75rem; }
+.text-2xl { font-size: 1.5rem;   line-height: 2rem; }
+.text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+
+// Text Colors
+.text-muted   { opacity: 0.6; }
+.text-success { color: var(--mg-badge-success-bg); }
+.text-danger  { color: var(--mg-badge-error-bg); }
+
+// Whitespace
+.whitespace-nowrap { white-space: nowrap; }
+
+// Line Clamp
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}

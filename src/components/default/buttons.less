@@ -1,4 +1,5 @@
-button {
+button,
+a.btn {
   position: relative;
   // Reset button styles
   border: none;
@@ -61,7 +62,8 @@ button {
   }
 
   // Add disabled state
-  &:disabled {
+  &:disabled,
+  &[aria-disabled="true"] {
     opacity: 0.6;
     cursor: not-allowed;
     
@@ -106,4 +108,12 @@ button {
     min-height: 3rem;
     padding: @button-padding 1.25rem;
   }
+}
+
+// Anchor-specific button reset
+a.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
