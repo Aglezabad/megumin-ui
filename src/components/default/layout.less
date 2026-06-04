@@ -125,3 +125,89 @@
 
 // Position
 .relative { position: relative; }
+
+// Responsive Grid Columns
+@media (min-width: 640px) {
+  .grid {
+    &.sm-cols-1 { grid-template-columns: repeat(1, 1fr); }
+    &.sm-cols-2 { grid-template-columns: repeat(2, 1fr); }
+    &.sm-cols-3 { grid-template-columns: repeat(3, 1fr); }
+    &.sm-cols-4 { grid-template-columns: repeat(4, 1fr); }
+    &.sm-cols-6 { grid-template-columns: repeat(6, 1fr); }
+    &.sm-cols-12 { grid-template-columns: repeat(12, 1fr); }
+  }
+}
+@media (min-width: 768px) {
+  .grid {
+    &.md-cols-1 { grid-template-columns: repeat(1, 1fr); }
+    &.md-cols-2 { grid-template-columns: repeat(2, 1fr); }
+    &.md-cols-3 { grid-template-columns: repeat(3, 1fr); }
+    &.md-cols-4 { grid-template-columns: repeat(4, 1fr); }
+    &.md-cols-6 { grid-template-columns: repeat(6, 1fr); }
+    &.md-cols-12 { grid-template-columns: repeat(12, 1fr); }
+  }
+}
+@media (min-width: 1024px) {
+  .grid {
+    &.lg-cols-1 { grid-template-columns: repeat(1, 1fr); }
+    &.lg-cols-2 { grid-template-columns: repeat(2, 1fr); }
+    &.lg-cols-3 { grid-template-columns: repeat(3, 1fr); }
+    &.lg-cols-4 { grid-template-columns: repeat(4, 1fr); }
+    &.lg-cols-6 { grid-template-columns: repeat(6, 1fr); }
+    &.lg-cols-12 { grid-template-columns: repeat(12, 1fr); }
+  }
+}
+
+// Responsive Flex Direction
+@media (min-width: 640px) {
+  .flex {
+    &.sm-row { flex-direction: row; }
+    &.sm-column { flex-direction: column; }
+  }
+}
+@media (min-width: 768px) {
+  .flex {
+    &.md-row { flex-direction: row; }
+    &.md-column { flex-direction: column; }
+  }
+}
+@media (min-width: 1024px) {
+  .flex {
+    &.lg-row { flex-direction: row; }
+    &.lg-column { flex-direction: column; }
+  }
+}
+
+// Visibility Helpers
+@media (min-width: 640px) {
+  .sm-hidden { display: none; }
+}
+@media (min-width: 768px) {
+  .md-hidden { display: none; }
+}
+@media (min-width: 1024px) {
+  .lg-hidden { display: none; }
+}
+
+// Optional Layout Helpers
+.header .nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-size: 1.5rem;
+  cursor: pointer;
+  min-height: auto;
+  padding: 0.5rem;
+}
+
+@media (max-width: 639px) {
+  .header .nav-toggle { display: block; }
+}
+
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 150;
+}
