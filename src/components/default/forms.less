@@ -26,8 +26,10 @@ select {
   }
 
   &:disabled {
-    opacity: 0.6;
+    opacity: 0.5;
     cursor: not-allowed;
+    background-color: var(--mg-base-header-border);
+    border-color: var(--mg-form-border);
   }
 
   &.primary {
@@ -114,8 +116,13 @@ input[type="radio"] {
   }
 
   &:disabled {
-    opacity: 0.6;
+    opacity: 0.5;
     cursor: not-allowed;
+  }
+
+  &:disabled:not(:checked) {
+    background-color: var(--mg-base-header-border);
+    border-color: var(--mg-form-border);
   }
 
   &.primary {
