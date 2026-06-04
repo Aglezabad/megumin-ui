@@ -75,3 +75,21 @@ a {
   background-color: var(--mg-tertiary-bg);
   color: var(--mg-tertiary-fg);
 }
+
+// Container override for narrow viewports
+@media (max-width: 767px) {
+  body {
+    .container {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}
+@media (min-width: 768px) {
+  body {
+    .container {
+      max-width: 1200px;
+      width: auto;
+    }
+  }
+}
